@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 .btn {
-  @apply py-[10px] px-8 rounded-full bg-colors-primary text-white border border-colors-primary hover:bg-transparent hover:text-colors-primary;
+  @apply py-[10px] px-4 md:px-8 rounded-full bg-colors-primary text-white border border-colors-primary hover:bg-transparent hover:text-colors-primary;
 }
 
 .btn-outline {
-  @apply py-[10px] px-8 rounded-full bg-transparent text-slate-800 border border-colors-primary hover:bg-transparent hover:text-white hover:bg-colors-primary;
+  @apply py-[10px] px-4 md:px-8 rounded-full bg-transparent text-slate-800 border border-colors-primary hover:bg-transparent hover:text-white hover:bg-colors-primary;
 }
 
 .btn-outline:hover > .fa-solid {
