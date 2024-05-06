@@ -22,6 +22,9 @@
     <!-- Swiper -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
+    <!-- Aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
     <title>SMKN 1 Kota Serang</title>
   </head>
 
@@ -30,7 +33,7 @@
     <header class="sticky top-0 z-50" x-data="{ scroll: false }" @scroll.window="scroll = (window.pageYOffset > 100) ? true : false" :class="{ 'bg-white border-b border-colors-primary shadow-lg': scroll, 'bg-transparent': !scroll }">
       <nav class="container flex justify-between items-center" x-data="{isOpen:false}">
         <!-- Logo -->
-        <div class="text-colors-primary text-2xl md:text-3xl font-bold py-5">
+        <div class="text-colors-primary text-2xl md:text-3xl font-bold py-5" data-aos="fade-right" data-aos-duration="1000">
           <a href="#beranda">
             <h1>SM<span class="text-slate-800">KN1</span></h1>
           </a>
@@ -38,7 +41,7 @@
         <!-- End Logo -->
 
         <!-- Nav link -->
-        <ul class="hidden lg:flex items-center justify-center gap-8 text-sm text-slate-600 tracking-wide">
+        <ul class="hidden mx-auto lg:flex items-center justify-center gap-8 text-sm text-slate-600 tracking-wide" data-aos="zoom-in" data-aos-duration="1000">
           <li>
             <a href="#beranda" class="text-colors-primary hover:text-colors-primary font-semibold">Beranda</a>
           </li>
@@ -62,12 +65,25 @@
         <!-- End Navlink -->
 
         <!-- Button -->
-        <button class="btn hidden lg:block">Contact</button>
+        <div class="hidden lg:flex gap-4 items-center" data-aos="fade-left" data-aos-duration="1000">
+          <div id="darkmode" class="cursor-pointer" @click="isDark = !isDark">
+            <div class="text-white" x-show="!isDark" x-transition:enter="transition ease-out duration-700 transform" x-transition:enter-start="opacity-0 scale-0" x-transition:enter-end="opacity-100 scale-100">
+              <i class="fa-solid fa-sun text-xl bg-colors-primary/40 p-3 rounded-full"></i>
+            </div>
+
+            <div class="text-slate-800" x-show="isDark" x-transition:enter="transition ease-out duration-700 transform" x-transition:enter-start="opacity-0 scale-0" x-transition:enter-end="opacity-100 scale-100">
+              <i class="fa-solid fa-moon text-xl bg-colors-primary/40 py-3 px-[14px] rounded-full"></i>
+            </div>
+          </div>
+
+          <button class="btn">Contact</button>
+        </div>
+
         <!-- End Button -->
 
         <!-- Mobile Menu -->
         <!-- Humberger & Dark Mode Menu -->
-        <div class="flex gap-3 items-center">
+        <div class="flex gap-3 items-center" data-aos="fade-left" data-aos-duration="1000">
           <!-- darkmode -->
           <div id="darkmode " class="lg:hidden cursor-pointer" @click="isDark = !isDark">
             <div class="text-white" x-show="!isDark" x-transition:enter="transition ease-out duration-700 transform" x-transition:enter-start="opacity-0 scale-0" x-transition:enter-end="opacity-100 scale-100">
@@ -87,7 +103,7 @@
             </div>
 
             <div :class="isOpen ? '' : 'hidden'" class="text-white">
-              <i class="fa-solid fa-xmark bg-colors-primary/40 p-2 rounded-full"></i>
+              <i class="fa-solid fa-xmark bg-colors-primary/40 py-2 px-[9px] rounded-full"></i>
             </div>
           </div>
           <!-- End Humberger -->
@@ -140,7 +156,7 @@
         <div class="container py-16 md:py-24">
           <div class="flex flex-col gap-6 lg:flex-row lg:items-center justify-between md:w-[90%] mx-auto">
             <!-- Bagian Kiri -->
-            <div class="space-y-6 md:space-y-8 text-center lg:text-start lg:w-1/2">
+            <div class="space-y-6 md:space-y-8 text-center lg:text-start lg:w-1/2" data-aos="fade-right" data-aos-duration="1000">
               <h1 class="font-bold text-colors-primary text-3xl md:text-6xl">SMK Negeri <span class="text-slate-800">Serang</span></h1>
               <p class="text-sm text-slate-800 leading-relaxed">sekolah adalah tempat mencetak penerus bangsa yang berkualitas dan berprestasi di segala bidang yang dapat bersaing di dunia internasional</p>
 
@@ -172,17 +188,17 @@
 
             <!-- Bagian Kanan -->
             <div class="lg:w-1/2 flex justify-center lg:justify-end mt-8 lg:lg:mt-0 relative">
-              <div class="w-[450px] h-[490px] md:w-[550px] md:h-[650px] lg:w-[480px] lg:h-[580px] overflow-hidden rounded-xl scale-100">
+              <div class="w-[450px] h-[490px] md:w-[550px] md:h-[650px] lg:w-[480px] lg:h-[580px] overflow-hidden rounded-xl scale-100" data-aos="zoom-in" data-aos-duration="1000">
                 <img src="img/hero.png" alt="" class="rounded-xl w-full h-full hover:scale-110 ease-in duration-300" />
               </div>
 
               <!-- Quotes bawah -->
-              <div class="p-4 bg-white absolute bottom-16 md:bottom-20 -left-3 md:-left-10 lg:-left-14 w-52 md:w-60 shadow-lg rounded-xl">
+              <div class="p-4 bg-white absolute bottom-16 md:bottom-20 -left-3 md:-left-10 lg:-left-14 w-52 md:w-60 shadow-lg rounded-xl" data-aos="fade-right" data-aos-duration="2000">
                 <p class="text-xs leading-relaxed font-bold text-slate-800">“ Belajar Itu Menyenangkan kuncinya jangan pernah menyerah oleh apapun itu ”</p>
               </div>
 
               <!-- Quotes Atas -->
-              <div class="p-4 bg-white absolute top-[50px] md:top-[60px] -right-3 md:-right-10 lg:-right-16 w-52 md:w-64 shadow-lg rounded-xl">
+              <div class="p-4 bg-white absolute top-[50px] md:top-[60px] -right-3 md:-right-10 lg:-right-16 w-52 md:w-64 shadow-lg rounded-xl" data-aos="fade-left" data-aos-duration="2000">
                 <div class="flex gap-2">
                   <div class="w-14 overflow-hidden">
                     <img src="img/foto-hero.png" alt="" class="object-cover w-full" />
@@ -212,15 +228,15 @@
         <div class="container py-14 md:py-20">
           <div class="md:w-[90%] lg:w-[85%] mx-auto">
             <div class="title">
-              <h1>Kenapa Harus <span>SMK Negeri</span> Serang?</h1>
-              <p>Alasan kenapa harus memilih untuk bergabung dengan SMK Telkom Serang.</p>
+              <h1 data-aos="zoom-in" data-aos-duration="1000">Kenapa Harus <span>SMK Negeri</span> Serang?</h1>
+              <p data-aos="fade-up" data-aos-duration="1500">Alasan kenapa harus memilih untuk bergabung dengan SMK Telkom Serang.</p>
             </div>
           </div>
 
           <!-- Content grid -->
           <div class="pt-12 md:pt-16 grid place-items-center md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-4">
             <!-- grid 1 -->
-            <div class="flex flex-col items-center justify-center py-8 px-6 shadow-lg rounded-lg w-[90%] md:w-full text-center hover:-translate-y-3 ease-in duration-300">
+            <div class="flex flex-col items-center justify-center py-8 px-6 shadow-lg rounded-lg w-[90%] md:w-full text-center hover:-translate-y-3 ease-in duration-300" data-aos="fade-up" data-aos-duration="500">
               <div class="w-16">
                 <img src="img/features-1.png" alt="" class="w-full object-cover" />
               </div>
@@ -229,7 +245,7 @@
             </div>
 
             <!-- grid 2 -->
-            <div class="flex flex-col items-center justify-center py-8 px-6 shadow-lg rounded-lg w-[90%] md:w-full text-center hover:-translate-y-3 ease-in duration-300">
+            <div class="flex flex-col items-center justify-center py-8 px-6 shadow-lg rounded-lg w-[90%] md:w-full text-center hover:-translate-y-3 ease-in duration-300" data-aos="fade-up" data-aos-duration="1000">
               <div class="w-16">
                 <img src="img/features-2.png" alt="" class="w-full object-cover" />
               </div>
@@ -238,7 +254,7 @@
             </div>
 
             <!-- grid 3 -->
-            <div class="flex flex-col items-center justify-center py-8 px-6 shadow-lg rounded-lg w-[90%] md:w-full text-center hover:-translate-y-3 ease-in duration-300">
+            <div class="flex flex-col items-center justify-center py-8 px-6 shadow-lg rounded-lg w-[90%] md:w-full text-center hover:-translate-y-3 ease-in duration-300" data-aos="fade-up" data-aos-duration="1500">
               <div class="w-16">
                 <img src="img/features-3.png" alt="" class="w-full object-cover" />
               </div>
@@ -247,7 +263,7 @@
             </div>
 
             <!-- grid 4 -->
-            <div class="flex flex-col items-center justify-center py-8 px-6 shadow-lg rounded-lg w-[90%] md:w-full text-center hover:-translate-y-3 ease-in duration-300">
+            <div class="flex flex-col items-center justify-center py-8 px-6 shadow-lg rounded-lg w-[90%] md:w-full text-center hover:-translate-y-3 ease-in duration-300" data-aos="fade-up" data-aos-duration="2000">
               <div class="w-16">
                 <img src="img/features-4.png" alt="" class="w-full object-cover" />
               </div>
@@ -263,25 +279,25 @@
       <section id="profile" class="bg-white -mb-8 pt-8">
         <div class="container py-14 md:py-20">
           <div class="title-2">
-            <h1>
+            <h1 data-aos="zoom-in" data-aos-duration="1000">
               Profil <span>SMK Negeri</span> <br />
               Serang
             </h1>
           </div>
 
           <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-12">
-            <div class="w-full h-full md:w-[580px] md:h-[405px] lg:w-[550px] lg:h-[380px] overflow-hidden rounded-2xl">
+            <div class="w-full h-full md:w-[580px] md:h-[405px] lg:w-[550px] lg:h-[380px] overflow-hidden rounded-2xl" data-aos="fade-right" data-aos-duration="1500">
               <img src="img/foto-profile.png" alt="" class="w-full h-full object-fill hover:scale-125 ease-in duration-300" />
             </div>
 
             <div class="text-center lg:text-start lg:w-1/2">
-              <h1 class="text-xl md:text-2xl text-slate-800 font-bold leading-relaxed">Sembutan Kepala Sekolah SMK Negeri Serang</h1>
-              <p class="mt-10 lg:mt-12 mb-4 text-slate-400 leading-relaxed text-sm md:text-base text-justify">
+              <h1 data-aos="fade-left" data-aos-duration="1000" class="text-xl md:text-2xl text-slate-800 font-bold leading-relaxed">Sembutan Kepala Sekolah SMK Negeri Serang</h1>
+              <p data-aos="fade-left" data-aos-duration="1500" class="mt-10 lg:mt-12 mb-4 text-slate-400 leading-relaxed text-sm md:text-base text-justify">
                 sekolah adalah tempat mencetak penerus bangsa yang berkualitas dan berprestasi di segala bidang yang dapat bersaing di dunia internasional
               </p>
-              <p class="text-slate-400 leading-relaxed text-sm md:text-base text-justify">dan Sekolah adalah tempat anak-anak mendapatkan dukungan untuk melengkapi pembelajarannya di sekola</p>
+              <p data-aos="fade-left" data-aos-duration="2000" class="text-slate-400 leading-relaxed text-sm md:text-base text-justify">dan Sekolah adalah tempat anak-anak mendapatkan dukungan untuk melengkapi pembelajarannya di sekola</p>
 
-              <button class="btn mt-16">Baca Selengkapnya <i class="fa-solid fa-chevron-right ms-2"></i></button>
+              <button data-aos="fade-up" data-aos-duration="2000" class="btn mt-16">Baca Selengkapnya <i class="fa-solid fa-chevron-right ms-2"></i></button>
             </div>
           </div>
         </div>
@@ -292,14 +308,14 @@
       <section id="program" class="bg-white -mb-8 pt-8">
         <div class="container py-14 md:py-20">
           <div class="title-2">
-            <h1>Jurusan Di <span>SMK Negeri</span> Serang</h1>
-            <p>Pilihan program keahlian di SMK Negeri Serang.</p>
+            <h1 data-aos="zoom-in" data-aos-duration="1000">Jurusan Di <span>SMK Negeri</span> Serang</h1>
+            <p data-aos="fade-up" data-aos-duration="1500">Pilihan program keahlian di SMK Negeri Serang.</p>
           </div>
 
           <!-- Grid Content -->
           <div class="grid md:grid-cols-2 lg:grid-cols-3 place-items-center gap-8">
             <!-- Content 1 -->
-            <div class="w-3/4 md:w-full space-y-8 py-6 px-4 bg-colors-primary rounded-xl flex flex-col items-center text-center hover:-translate-y-2 ease-in duration-300">
+            <div data-aos="fade-right" data-aos-duration="1000" class="w-3/4 md:w-full space-y-8 py-6 px-4 bg-colors-primary rounded-xl flex flex-col items-center text-center hover:-translate-y-2 ease-in duration-300">
               <div class="w-12 p-2 bg-white rounded-lg">
                 <img src="img/jurusan-komputer.png" alt="" class="w-full h-full object-fill" />
               </div>
@@ -312,7 +328,7 @@
             </div>
 
             <!-- Content 2 -->
-            <div class="w-3/4 md:w-full space-y-8 py-6 px-4 bg-colors-primary rounded-xl flex flex-col items-center text-center hover:-translate-y-2 ease-in duration-300">
+            <div data-aos="fade-down" data-aos-duration="1500" class="w-3/4 md:w-full space-y-8 py-6 px-4 bg-colors-primary rounded-xl flex flex-col items-center text-center hover:-translate-y-2 ease-in duration-300">
               <div class="w-12 p-2 bg-white rounded-lg">
                 <img src="img/jurusan-perhotelan.png" alt="" class="w-full h-full object-fill" />
               </div>
@@ -325,7 +341,7 @@
             </div>
 
             <!-- Content 3 -->
-            <div class="w-3/4 md:w-full space-y-8 py-6 px-4 bg-colors-primary rounded-xl flex flex-col items-center text-center hover:-translate-y-2 ease-in duration-300">
+            <div data-aos="fade-left" data-aos-duration="2000" class="w-3/4 md:w-full space-y-8 py-6 px-4 bg-colors-primary rounded-xl flex flex-col items-center text-center hover:-translate-y-2 ease-in duration-300">
               <div class="w-12 p-2 bg-white rounded-lg">
                 <img src="img/jurusan-rekayasa.png" alt="" class="w-full h-full object-fill" />
               </div>
@@ -338,7 +354,7 @@
             </div>
 
             <!-- Content 4 -->
-            <div class="w-3/4 md:w-full space-y-8 py-6 px-4 bg-colors-primary rounded-xl flex flex-col items-center text-center hover:-translate-y-2 ease-in duration-300">
+            <div data-aos="fade-right" data-aos-duration="1000" class="w-3/4 md:w-full space-y-8 py-6 px-4 bg-colors-primary rounded-xl flex flex-col items-center text-center hover:-translate-y-2 ease-in duration-300">
               <div class="w-12 p-2 bg-white rounded-lg">
                 <img src="img/jurusan-arsitekstur.png" alt="" class="w-full h-full object-fill" />
               </div>
@@ -351,7 +367,7 @@
             </div>
 
             <!-- Content 5 -->
-            <div class="w-3/4 md:w-full space-y-8 py-6 px-4 bg-colors-primary rounded-xl flex flex-col items-center text-center hover:-translate-y-2 ease-in duration-300">
+            <div data-aos="fade-up" data-aos-duration="1500" class="w-3/4 md:w-full space-y-8 py-6 px-4 bg-colors-primary rounded-xl flex flex-col items-center text-center hover:-translate-y-2 ease-in duration-300">
               <div class="w-12 p-2 bg-white rounded-lg">
                 <img src="img/jurusan-audio.png" alt="" class="w-full h-full object-fill" />
               </div>
@@ -364,7 +380,7 @@
             </div>
 
             <!-- Content 6 -->
-            <div class="w-3/4 md:w-full space-y-8 py-6 px-4 bg-colors-primary rounded-xl flex flex-col items-center text-center hover:-translate-y-2 ease-in duration-300">
+            <div data-aos="fade-left" data-aos-duration="2000" class="w-3/4 md:w-full space-y-8 py-6 px-4 bg-colors-primary rounded-xl flex flex-col items-center text-center hover:-translate-y-2 ease-in duration-300">
               <div class="w-12 p-2 bg-white rounded-lg">
                 <img src="img/jurusan-teknik-listrik.png" alt="" class="w-full h-full object-fill" />
               </div>
@@ -384,14 +400,14 @@
       <section id="extra" class="bg-[#F0EFFF] -mb-8 pt-8 pb-10">
         <div class="container py-14 md:py-20">
           <div class="title-2">
-            <h1>Ekstrakulikuler Di <span>SMK Negeri</span> Serang</h1>
-            <p>Pilihan Ekstrakulikuler di SMK Negeri Serang.</p>
+            <h1 data-aos="zoom-in" data-aos-duration="1000">Ekstrakulikuler Di <span>SMK Negeri</span> Serang</h1>
+            <p data-aos="fade-up" data-aos-duration="1500">Pilihan Ekstrakulikuler di SMK Negeri Serang.</p>
           </div>
 
           <!-- Grid content -->
           <div class="grid place-items-center md:grid-cols-2 lg:grid-cols-4 gap-8">
             <!-- content 1 -->
-            <div class="p-4 bg-white shadow-md space-y-6 w-3/4 md:w-full rounded-xl hover:-translate-y-2 ease-in duration-200">
+            <div data-aos="zoom-in" data-aos-duration="1000" class="p-4 bg-white shadow-md space-y-6 w-3/4 md:w-full rounded-xl hover:-translate-y-2 ease-in duration-200">
               <div class="w-12">
                 <img src="img/extra-1.png" alt="" class="w-full h-full object-fill" />
               </div>
@@ -403,7 +419,7 @@
             </div>
 
             <!-- content 2 -->
-            <div class="p-4 bg-white shadow-md space-y-6 w-3/4 md:w-full rounded-xl hover:-translate-y-2 ease-in duration-200">
+            <div data-aos="zoom-in" data-aos-duration="1000" class="p-4 bg-white shadow-md space-y-6 w-3/4 md:w-full rounded-xl hover:-translate-y-2 ease-in duration-200">
               <div class="w-12">
                 <img src="img/extra-2.png" alt="" class="w-full h-full object-fill" />
               </div>
@@ -415,7 +431,7 @@
             </div>
 
             <!-- content 3 -->
-            <div class="p-4 bg-white shadow-md space-y-6 w-3/4 md:w-full rounded-xl hover:-translate-y-2 ease-in duration-200">
+            <div data-aos="zoom-in" data-aos-duration="1000" class="p-4 bg-white shadow-md space-y-6 w-3/4 md:w-full rounded-xl hover:-translate-y-2 ease-in duration-200">
               <div class="w-12">
                 <img src="img/extra-3.png" alt="" class="w-full h-full object-fill" />
               </div>
@@ -427,7 +443,7 @@
             </div>
 
             <!-- content 4 -->
-            <div class="p-4 bg-white shadow-md space-y-6 w-3/4 md:w-full rounded-xl hover:-translate-y-2 ease-in duration-200">
+            <div data-aos="zoom-in" data-aos-duration="1000" class="p-4 bg-white shadow-md space-y-6 w-3/4 md:w-full rounded-xl hover:-translate-y-2 ease-in duration-200">
               <div class="w-12">
                 <img src="img/extra-4.png" alt="" class="w-full h-full object-fill" />
               </div>
@@ -446,14 +462,14 @@
       <section id="berita" class="bg-white -mb-8 pt-8 pb-8">
         <div class="container py-14 md:py-20">
           <div class="title-2">
-            <h1>Berita Terbaru Di <span>SMK Negeri</span> Serang</h1>
-            <p>Berita Terbaru Tentang SMK Negeri Serang.</p>
+            <h1 data-aos="zoom-in" data-aos-duration="1000">Berita Terbaru Di <span>SMK Negeri</span> Serang</h1>
+            <p data-aos="fade-up" data-aos-duration="1500">Berita Terbaru Tentang SMK Negeri Serang.</p>
           </div>
 
           <!-- Grid Content -->
           <div class="grid place-items-center md:grid-cols-2 lg:grid-cols-4 gap-8">
             <!-- content 1 -->
-            <div class="w-full bg-white shadow-lg rounded-xl">
+            <div data-aos="zoom-in" data-aos-duration="1000" class="w-full bg-white shadow-lg rounded-xl">
               <div class="overflow-hidden rounded-t-xl">
                 <img src="img/blog-1.png" alt="" class="w-full h-full object-cover rounded-t-xl hover:scale-125 ease-in duration-300" />
               </div>
@@ -471,7 +487,7 @@
             </div>
 
             <!-- content 2 -->
-            <div class="w-full bg-white shadow-lg rounded-xl">
+            <div data-aos="zoom-in" data-aos-duration="1000" class="w-full bg-white shadow-lg rounded-xl">
               <div class="overflow-hidden rounded-t-xl">
                 <img src="img/blog-2.png" alt="" class="w-full h-full object-cover rounded-t-xl hover:scale-125 ease-in duration-300" />
               </div>
@@ -489,7 +505,7 @@
             </div>
 
             <!-- content 3 -->
-            <div class="w-full bg-white shadow-lg rounded-xl">
+            <div data-aos="zoom-in" data-aos-duration="1000" class="w-full bg-white shadow-lg rounded-xl">
               <div class="overflow-hidden rounded-t-xl">
                 <img src="img/blog-3.png" alt="" class="w-full h-full object-cover rounded-t-xl hover:scale-125 ease-in duration-300" />
               </div>
@@ -507,7 +523,7 @@
             </div>
 
             <!-- content 4 -->
-            <div class="w-full bg-white shadow-lg rounded-xl">
+            <div data-aos="zoom-in" data-aos-duration="1000" class="w-full bg-white shadow-lg rounded-xl">
               <div class="overflow-hidden rounded-t-xl">
                 <img src="img/blog-4.png" alt="" class="w-full h-full object-cover rounded-t-xl hover:scale-125 ease-in duration-300" />
               </div>
@@ -525,7 +541,7 @@
             </div>
 
             <!-- content 5 -->
-            <div class="w-full bg-white shadow-lg rounded-xl">
+            <div data-aos="zoom-in" data-aos-duration="1000" class="w-full bg-white shadow-lg rounded-xl">
               <div class="overflow-hidden rounded-t-xl">
                 <img src="img/blog-5.png" alt="" class="w-full h-full object-cover rounded-t-xl hover:scale-125 ease-in duration-300" />
               </div>
@@ -543,7 +559,7 @@
             </div>
 
             <!-- content 6 -->
-            <div class="w-full bg-white shadow-lg rounded-xl">
+            <div data-aos="zoom-in" data-aos-duration="1000" class="w-full bg-white shadow-lg rounded-xl">
               <div class="overflow-hidden rounded-t-xl">
                 <img src="img/blog-6.png" alt="" class="w-full h-full object-cover rounded-t-xl hover:scale-125 ease-in duration-300" />
               </div>
@@ -561,7 +577,7 @@
             </div>
 
             <!-- content 7 -->
-            <div class="w-full bg-white shadow-lg rounded-xl">
+            <div data-aos="zoom-in" data-aos-duration="1000" class="w-full bg-white shadow-lg rounded-xl">
               <div class="overflow-hidden rounded-t-xl">
                 <img src="img/blog-7.png" alt="" class="w-full h-full object-cover rounded-t-xl hover:scale-125 ease-in duration-300" />
               </div>
@@ -579,7 +595,7 @@
             </div>
 
             <!-- content 8 -->
-            <div class="w-full bg-white shadow-lg rounded-xl">
+            <div data-aos="zoom-in" data-aos-duration="1000" class="w-full bg-white shadow-lg rounded-xl">
               <div class="overflow-hidden rounded-t-xl">
                 <img src="img/blog-8.png" alt="" class="w-full h-full object-cover rounded-t-xl hover:scale-125 ease-in duration-300" />
               </div>
@@ -598,7 +614,7 @@
           </div>
 
           <!-- Buton -->
-          <div class="flex items-center justify-center pt-16">
+          <div data-aos="fade-up" data-aos-duration="1000" class="flex items-center justify-center pt-16">
             <button class="btn shadow-md">Semua Berita</button>
           </div>
         </div>
@@ -610,7 +626,7 @@
         <div class="container py-14 md:py-20">
           <div class="flex flex-col lg:flex-row items-center gap-8 relative lg:static">
             <div class="w-full lg:w-1/3">
-              <h1 class="text-white font-bold md:text-3xl text-xl leading-relaxed text-center lg:text-start w-[90%] md:w-3/4 lg:w-full mx-auto">Foto Dokumentasi Kegiatan SMK Negeri Serang</h1>
+              <h1 data-aos="zoom-in" data-aos-duration="1000" class="text-white font-bold md:text-3xl text-xl leading-relaxed text-center lg:text-start w-[90%] md:w-3/4 lg:w-full mx-auto">Foto Dokumentasi Kegiatan SMK Negeri Serang</h1>
 
               <!-- buton -->
               <div class="lg:mt-48 mx-auto w-full absolute lg:static -bottom-[10%]">
@@ -623,7 +639,7 @@
               <div class="swiper mySwiper multiple-slide-carousel swiper-container relative">
                 <div class="swiper-wrapper">
                   <!-- galeri 1 -->
-                  <div class="swiper-slide">
+                  <div data-aos="zoom-in" data-aos-duration="1000" class="swiper-slide">
                     <div class="relative overflow-hidden h-[450px] rounded-xl lg:rounded-none md:h-full">
                       <img src="img/galeri-1.png" alt="" class="w-full h-full object-fill hover:scale-110 ease-in duration-500" />
                       <div class="absolute bottom-0 w-full bg-white/50 py-8 lg:py-4 px-6 backdrop-blur-[4px] h-[45%] text-center">
@@ -636,7 +652,7 @@
                   </div>
 
                   <!-- galeri 2 -->
-                  <div class="swiper-slide">
+                  <div data-aos="zoom-in" data-aos-duration="1000" class="swiper-slide">
                     <div class="relative overflow-hidden h-[450px] rounded-xl lg:rounded-none md:h-full lg:w-full">
                       <img src="img/galeri-2.png" alt="" class="w-full h-full object-fill hover:scale-110 ease-in duration-500" />
                       <div class="absolute bottom-0 w-full bg-white/50 py-8 lg:py-4 px-6 backdrop-blur-[4px] h-[45%] text-center">
@@ -720,8 +736,8 @@
       <section id="alumni" class="bg-white">
         <div class="container py-14 lg:py-20 w-[90%] mx-auto">
           <div class="title-2">
-            <h1>Profil Alumni <span>SMK Negeri</span> Serang</h1>
-            <p>Profil Alumni SMK Negeri Serang.</p>
+            <h1 data-aos="zoom-in" data-aos-duration="1000">Profil Alumni <span>SMK Negeri</span> Serang</h1>
+            <p data-aos="fade-up" data-aos-duration="1500">Profil Alumni SMK Negeri Serang.</p>
           </div>
 
           <!-- Content -->
@@ -729,7 +745,7 @@
             <div class="swiper swiperAlumni swiper-container relative">
               <div class="swiper-wrapper">
                 <!-- slide 1 -->
-                <div class="swiper-slide">
+                <div data-aos="zoom-in" data-aos-duration="1000" class="swiper-slide">
                   <div class="flex flex-col lg:flex-row items-center justify-center gap-4">
                     <div class="overflow-hidden h-[350px]">
                       <img src="img/alumni-1.png" alt="" class="w-full h-full object-fill" />
@@ -746,7 +762,7 @@
                 </div>
 
                 <!-- Content 2 -->
-                <div class="swiper-slide">
+                <div data-aos="zoom-in" data-aos-duration="1000" class="swiper-slide">
                   <div class="flex flex-col lg:flex-row items-center justify-center gap-4">
                     <div class="overflow-hidden h-[350px]">
                       <img src="img/alumni-2.png" alt="" class="w-full h-full object-fill" />
@@ -806,7 +822,7 @@
 
     <!-- Footer section -->
     <footer class="bg-[#362FD9]">
-      <div class="container py-14">
+      <div data-aos="zoom-in" data-aos-duration="1000" class="container py-14">
         <div class="flex flex-col md:flex-row md:justify-between text-white text-center md:text-start">
           <!-- bagian kiri -->
           <div class="md:w-1/3">
@@ -828,7 +844,7 @@
           </div>
         </div>
       </div>
-      <div class="border-t border-white text-center text-white flex items-center justify-center">
+      <div data-aos="zoom-in" data-aos-duration="1000" class="border-t border-white text-center text-white flex items-center justify-center">
         <p class="pt-8 pb-6">2024 &copy; SMKN. All Right Reserved.</p>
       </div>
     </footer>
@@ -837,7 +853,14 @@
     <!-- Swiperjs -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <!--JAVASCRIPT CODE-->
+    <!-- aos -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Aos -->
+    <script>
+      AOS.init({ once: true });
+    </script>
+    <!--JAVASCRIPT Swiper js CODE-->
     <script>
       const swiper = new Swiper(".multiple-slide-carousel", {
         loop: true,
