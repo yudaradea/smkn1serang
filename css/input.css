@@ -3,19 +3,30 @@
 @tailwind utilities;
 
 .btn {
-  @apply py-[12px] px-8 rounded-full bg-colors-primary text-white border border-colors-primary hover:bg-transparent hover:text-colors-primary;
+  @apply py-[12px] px-8 rounded-full bg-colors-primary text-white border border-colors-primary hover:bg-transparent hover:text-colors-primary
+  dark:hover:border-white dark:hover:text-white;
 }
 
 .btn:hover > i {
   @apply ms-4 ease-in-out duration-300;
 }
 
+.btn-hero {
+  @apply py-[12px] px-8 rounded-full bg-colors-primary text-white border border-colors-primary hover:bg-transparent hover:text-colors-primary
+  dark:bg-white dark:text-colors-primary dark:font-semibold dark:hover:border-white dark:hover:text-white dark:hover:bg-transparent;
+}
+
+.btn-hero:hover > i {
+  @apply ms-4 ease-in-out duration-300;
+}
+
 .btn-outline {
-  @apply py-[12px] px-8 rounded-full bg-transparent text-slate-800 border border-colors-primary hover:bg-transparent hover:text-white hover:bg-colors-primary;
+  @apply py-[12px] px-8 rounded-full bg-transparent text-slate-800 border border-colors-primary hover:bg-transparent hover:text-white hover:bg-colors-primary
+  dark:text-white dark:border-white dark:hover:bg-white dark:hover:text-colors-primary dark:hover:font-bold;
 }
 
 .btn-outline:hover > i {
-  @apply text-white ms-4 ease-in duration-300;
+  @apply text-white ms-4 ease-in duration-300 dark:text-colors-primary;
 }
 
 .title {
@@ -85,4 +96,17 @@
 .swiper-alumni-custom .swiper-pagination-bullet-active {
   opacity: 100% !important;
   background: #362fd9 !important;
+}
+
+.swiper-alumni-custom.dark .swiper-pagination-bullet {
+  border-radius: 4px !important;
+  margin-right: 10px !important;
+  background: #fff !important;
+  opacity: 0.2 !important;
+  text-align: center !important;
+}
+
+.swiper-alumni-custom.dark .swiper-pagination-bullet-active {
+  opacity: 100% !important;
+  background: #fff !important;
 }
