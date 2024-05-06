@@ -25,7 +25,7 @@
     <title>SMKN 1 Kota Serang</title>
   </head>
 
-  <body class="font-poppins">
+  <body class="font-poppins" x-data="{isDark:false}">
     <!-- Header -->
     <header class="sticky top-0 z-50" x-data="{ scroll: false }" @scroll.window="scroll = (window.pageYOffset > 100) ? true : false" :class="{ 'bg-white border-b border-colors-primary shadow-lg': scroll, 'bg-transparent': !scroll }">
       <nav class="container flex justify-between items-center" x-data="{isOpen:false}">
@@ -66,17 +66,33 @@
         <!-- End Button -->
 
         <!-- Mobile Menu -->
-        <!-- Humberger Menu -->
-        <div id="hamburger" class="lg:hidden cursor-pointer z-50" @click="isOpen = !isOpen">
-          <div :class="isOpen ? 'hidden' : ''">
-            <i class="fa-solid fa-bars fa-lg"></i>
-          </div>
+        <!-- Humberger & Dark Mode Menu -->
+        <div class="flex gap-3 items-center">
+          <!-- darkmode -->
+          <div id="darkmode " class="lg:hidden cursor-pointer" @click="isDark = !isDark">
+            <div class="text-white" x-show="!isDark" x-transition:enter="transition ease-out duration-700 transform" x-transition:enter-start="opacity-0 scale-0" x-transition:enter-end="opacity-100 scale-100">
+              <i class="fa-solid fa-sun bg-colors-primary/40 p-2 rounded-full"></i>
+            </div>
 
-          <div :class="isOpen ? '' : 'hidden'">
-            <i class="fa-solid fa-xmark fa-lg"></i>
+            <div class="text-slate-800" x-show="isDark" x-transition:enter="transition ease-out duration-700 transform" x-transition:enter-start="opacity-0 scale-0" x-transition:enter-end="opacity-100 scale-100">
+              <i class="fa-solid fa-moon bg-colors-primary/40 py-2 px-[9px] rounded-full"></i>
+            </div>
           </div>
+          <!-- End Darkmode -->
+
+          <!-- Hamburger -->
+          <div id="hamburger" class="lg:hidden cursor-pointer z-50" @click="isOpen = !isOpen">
+            <div :class="isOpen ? 'hidden' : ''" class="text-white">
+              <i class="fa-solid fa-bars bg-colors-primary/40 p-2 rounded-full"></i>
+            </div>
+
+            <div :class="isOpen ? '' : 'hidden'" class="text-white">
+              <i class="fa-solid fa-xmark bg-colors-primary/40 p-2 rounded-full"></i>
+            </div>
+          </div>
+          <!-- End Humberger -->
         </div>
-        <!-- End Humberger -->
+        <!-- End hamburger & darkmode -->
 
         <!-- Nav link Mobile -->
         <div
