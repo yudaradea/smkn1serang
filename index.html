@@ -1,13 +1,26 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth overflow-x-hidden" x-data="{isDark:false}" :class="{'dark' : isDark}">
+<html
+  lang="en"
+  class="scroll-smooth overflow-x-hidden"
+  x-data="{isDark:false}"
+  :class="{'dark' : isDark}"
+>
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" maximum-scale="1.0," user-scalable="no" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+      maximum-scale="1.0,"
+      user-scalable="no"
+    />
     <link rel="stylesheet" href="css/output.css" />
     <!-- Font Popins -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <!-- fontawesome -->
     <link
       rel="stylesheet"
@@ -17,10 +30,16 @@
       referrerpolicy="no-referrer"
     />
     <!-- Alpine JS -->
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
 
     <!-- Swiper -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
 
     <!-- Aos -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
@@ -28,7 +47,7 @@
     <title>SMKN 1 Kota Serang</title>
   </head>
 
-  <body class="font-poppins overflow-x-hidden">
+  <body class="font-poppins">
     <!-- Header -->
     <header
       class="sticky top-0 z-50"
@@ -37,9 +56,16 @@
       :class="{ 'bg-white dark:bg-dark-color border-b border-colors-primary shadow-lg': scroll, 'bg-transparent': !scroll }"
     >
       <div class="bg-white dark:bg-dark-color">
-        <nav class="container flex justify-between items-center" x-data="{isOpen:false}">
+        <nav
+          class="container flex justify-between items-center"
+          x-data="{isOpen:false}"
+        >
           <!-- Logo -->
-          <div class="text-colors-primary text-2xl md:text-3xl font-bold py-5" data-aos="fade-right" data-aos-duration="1000">
+          <div
+            class="text-colors-primary text-2xl md:text-3xl font-bold py-5"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+          >
             <a href="#beranda">
               <h1>SM<span class="text-slate-800 dark:text-white">KN1</span></h1>
             </a>
@@ -47,18 +73,30 @@
           <!-- End Logo -->
 
           <!-- Nav link -->
-          <ul class="hidden mx-auto lg:flex items-center justify-center gap-8 text-sm text-slate-600 tracking-wide dark:text-white" data-aos="zoom-in" data-aos-duration="1000">
+          <ul
+            class="hidden mx-auto lg:flex items-center justify-center gap-8 text-sm text-slate-600 tracking-wide dark:text-white"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+          >
             <li>
-              <a href="#beranda" class="text-colors-primary hover:text-colors-primary font-semibold">Beranda</a>
+              <a
+                href="#beranda"
+                class="text-colors-primary hover:text-colors-primary font-semibold"
+                >Beranda</a
+              >
             </li>
             <li>
-              <a href="#profile" class="hover:text-colors-primary">Tentang Kami</a>
+              <a href="#profile" class="hover:text-colors-primary"
+                >Tentang Kami</a
+              >
             </li>
             <li>
               <a href="#program" class="hover:text-colors-primary">Program</a>
             </li>
             <li>
-              <a href="#extra" class="hover:text-colors-primary">Extrakulikuler</a>
+              <a href="#extra" class="hover:text-colors-primary"
+                >Extrakulikuler</a
+              >
             </li>
 
             <li>
@@ -71,14 +109,34 @@
           <!-- End Navlink -->
 
           <!-- Button -->
-          <div class="hidden lg:flex gap-4 items-center" data-aos="fade-left" data-aos-duration="1000">
+          <div
+            class="hidden lg:flex gap-4 items-center"
+            data-aos="fade-left"
+            data-aos-duration="1000"
+          >
             <div id="darkmode" class="cursor-pointer" @click="isDark = !isDark">
-              <div class="text-white" x-show="!isDark" x-transition:enter="transition ease-out duration-700 transform" x-transition:enter-start="opacity-0 scale-0" x-transition:enter-end="opacity-100 scale-100">
-                <i class="fa-solid fa-sun text-xl bg-colors-primary/40 p-3 rounded-full"></i>
+              <div
+                class="text-white"
+                x-show="!isDark"
+                x-transition:enter="transition ease-out duration-700 transform"
+                x-transition:enter-start="opacity-0 scale-0"
+                x-transition:enter-end="opacity-100 scale-100"
+              >
+                <i
+                  class="fa-solid fa-sun text-xl bg-colors-primary/40 p-3 rounded-full"
+                ></i>
               </div>
 
-              <div class="text-slate-800" x-show="isDark" x-transition:enter="transition ease-out duration-700 transform" x-transition:enter-start="opacity-0 scale-0" x-transition:enter-end="opacity-100 scale-100">
-                <i class="fa-solid fa-moon text-xl bg-colors-primary text-white py-3 px-[14px] rounded-full"></i>
+              <div
+                class="text-slate-800"
+                x-show="isDark"
+                x-transition:enter="transition ease-out duration-700 transform"
+                x-transition:enter-start="opacity-0 scale-0"
+                x-transition:enter-end="opacity-100 scale-100"
+              >
+                <i
+                  class="fa-solid fa-moon text-xl bg-colors-primary text-white py-3 px-[14px] rounded-full"
+                ></i>
               </div>
             </div>
 
@@ -89,27 +147,60 @@
 
           <!-- Mobile Menu -->
           <!-- Humberger & Dark Mode Menu -->
-          <div class="flex gap-3 items-center z-50" data-aos="fade-left" data-aos-duration="1000">
+          <div
+            class="flex gap-3 items-center z-50"
+            data-aos="fade-left"
+            data-aos-duration="1000"
+          >
             <!-- darkmode -->
-            <div id="darkmode" class="lg:hidden cursor-pointer" :class="isOpen ? 'hidden' : ''" @click="isDark = !isDark">
-              <div class="text-white" x-show="!isDark" x-transition:enter="transition ease-out duration-700 transform" x-transition:enter-start="opacity-0 scale-0" x-transition:enter-end="opacity-100 scale-100">
-                <i class="fa-solid fa-sun bg-colors-primary/40 p-2 rounded-full"></i>
+            <div
+              id="darkmode"
+              class="lg:hidden cursor-pointer"
+              :class="isOpen ? 'hidden' : ''"
+              @click="isDark = !isDark"
+            >
+              <div
+                class="text-white"
+                x-show="!isDark"
+                x-transition:enter="transition ease-out duration-700 transform"
+                x-transition:enter-start="opacity-0 scale-0"
+                x-transition:enter-end="opacity-100 scale-100"
+              >
+                <i
+                  class="fa-solid fa-sun bg-colors-primary/40 p-2 rounded-full"
+                ></i>
               </div>
 
-              <div class="text-white" x-show="isDark" x-transition:enter="transition ease-out duration-700 transform" x-transition:enter-start="opacity-0 scale-0" x-transition:enter-end="opacity-100 scale-100">
-                <i class="fa-solid fa-moon bg-colors-primary/40 py-2 px-[9px] rounded-full"></i>
+              <div
+                class="text-white"
+                x-show="isDark"
+                x-transition:enter="transition ease-out duration-700 transform"
+                x-transition:enter-start="opacity-0 scale-0"
+                x-transition:enter-end="opacity-100 scale-100"
+              >
+                <i
+                  class="fa-solid fa-moon bg-colors-primary/40 py-2 px-[9px] rounded-full"
+                ></i>
               </div>
             </div>
             <!-- End Darkmode -->
 
             <!-- Hamburger -->
-            <div id="hamburger" class="lg:hidden cursor-pointer z-50" @click="isOpen = !isOpen">
+            <div
+              id="hamburger"
+              class="lg:hidden cursor-pointer z-50"
+              @click="isOpen = !isOpen"
+            >
               <div :class="isOpen ? 'hidden' : ''" class="text-white">
-                <i class="fa-solid fa-bars bg-colors-primary/40 p-2 rounded-full"></i>
+                <i
+                  class="fa-solid fa-bars bg-colors-primary/40 p-2 rounded-full"
+                ></i>
               </div>
 
               <div :class="isOpen ? '' : 'hidden'" class="text-white">
-                <i class="fa-solid fa-xmark bg-colors-primary/40 py-2 px-[9px] rounded-full"></i>
+                <i
+                  class="fa-solid fa-xmark bg-colors-primary/40 py-2 px-[9px] rounded-full"
+                ></i>
               </div>
             </div>
             <!-- End Humberger -->
@@ -129,22 +220,52 @@
           >
             <ul class="h-full grid place-items-center py-20 dark:text-white">
               <li>
-                <a href="#beranda" class="text-colors-primary hover:text-colors-primary font-semibold" @click="isOpen = !isOpen">Beranda</a>
+                <a
+                  href="#beranda"
+                  class="text-colors-primary hover:text-colors-primary font-semibold"
+                  @click="isOpen = !isOpen"
+                  >Beranda</a
+                >
               </li>
               <li>
-                <a href="#profile" class="hover:text-colors-primary" @click="isOpen = !isOpen">Tentang Kami</a>
+                <a
+                  href="#profile"
+                  class="hover:text-colors-primary"
+                  @click="isOpen = !isOpen"
+                  >Tentang Kami</a
+                >
               </li>
               <li>
-                <a href="#program" class="hover:text-colors-primary" @click="isOpen = !isOpen">Program</a>
+                <a
+                  href="#program"
+                  class="hover:text-colors-primary"
+                  @click="isOpen = !isOpen"
+                  >Program</a
+                >
               </li>
               <li>
-                <a href="#extra" class="hover:text-colors-primary" @click="isOpen = !isOpen">Extrakulikuler</a>
+                <a
+                  href="#extra"
+                  class="hover:text-colors-primary"
+                  @click="isOpen = !isOpen"
+                  >Extrakulikuler</a
+                >
               </li>
               <li>
-                <a href="#berita" class="hover:text-colors-primary" @click="isOpen = !isOpen">Berita</a>
+                <a
+                  href="#berita"
+                  class="hover:text-colors-primary"
+                  @click="isOpen = !isOpen"
+                  >Berita</a
+                >
               </li>
               <li>
-                <a href="#galeri" class="hover:text-colors-primary" @click="isOpen = !isOpen">Galeri</a>
+                <a
+                  href="#galeri"
+                  class="hover:text-colors-primary"
+                  @click="isOpen = !isOpen"
+                  >Galeri</a
+                >
               </li>
 
               <button class="btn">Contact</button>
@@ -159,56 +280,121 @@
 
     <main>
       <!-- Hero Section -->
-      <section id="beranda" class="bg-white -mb-6 dark:bg-gradient-to-r dark:from-color-purple-light dark:to-color-purple-bold">
+      <section
+        id="beranda"
+        class="bg-white -mb-6 dark:bg-gradient-to-r dark:from-color-purple-light dark:to-color-purple-bold"
+      >
         <div class="container py-16 md:py-24">
-          <div class="flex flex-col gap-6 lg:flex-row lg:items-center justify-between md:w-[90%] mx-auto">
+          <div
+            class="flex flex-col gap-6 lg:flex-row lg:items-center justify-between md:w-[90%] mx-auto"
+          >
             <!-- Bagian Kiri -->
-            <div class="space-y-6 md:space-y-8 text-center lg:text-start lg:w-1/2" data-aos="fade-right" data-aos-duration="1000">
-              <h1 class="font-bold text-colors-primary text-3xl md:text-6xl dark:text-white">SMK Negeri <span class="text-slate-800 dark:text-white">Serang</span></h1>
-              <p class="text-sm text-slate-800 dark:text-white leading-relaxed">sekolah adalah tempat mencetak penerus bangsa yang berkualitas dan berprestasi di segala bidang yang dapat bersaing di dunia internasional</p>
+            <div
+              class="space-y-6 md:space-y-8 text-center lg:text-start lg:w-1/2"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+            >
+              <h1
+                class="font-bold text-colors-primary text-3xl md:text-6xl dark:text-white"
+              >
+                SMK Negeri
+                <span class="text-slate-800 dark:text-white">Serang</span>
+              </h1>
+              <p class="text-sm text-slate-800 dark:text-white leading-relaxed">
+                sekolah adalah tempat mencetak penerus bangsa yang berkualitas
+                dan berprestasi di segala bidang yang dapat bersaing di dunia
+                internasional
+              </p>
 
               <!-- Button -->
-              <div class="flex gap-4 flex-col md:flex-row md:gap-6 pt-6 items-center justify-center lg:justify-start">
+              <div
+                class="flex gap-4 flex-col md:flex-row md:gap-6 pt-6 items-center justify-center lg:justify-start"
+              >
                 <a href="#features">
-                  <button class="btn-hero">Get Started <i class="fa-solid fa-chevron-right ms-2"></i></button>
+                  <button class="btn-hero">
+                    Get Started <i class="fa-solid fa-chevron-right ms-2"></i>
+                  </button>
                 </a>
 
                 <button class="btn-outline">
                   Video
-                  <i class="icon fa-solid fa-play ms-2 text-colors-primary dark:text-white"></i>
+                  <i
+                    class="icon fa-solid fa-play ms-2 text-colors-primary dark:text-white"
+                  ></i>
                 </button>
               </div>
 
-              <div class="flex gap-2 items-center justify-center lg:justify-start pt-6">
+              <div
+                class="flex gap-2 items-center justify-center lg:justify-start pt-6"
+              >
                 <div>
-                  <p class="text-slate-800 dark:text-white leading-relaxed text-sm md:text-base">We Are In Social Media :</p>
+                  <p
+                    class="text-slate-800 dark:text-white leading-relaxed text-sm md:text-base"
+                  >
+                    We Are In Social Media :
+                  </p>
                 </div>
-                <div class="flex gap-2 md:gap-4 text-slate-800 dark:text-white text-2xl">
-                  <i class="hover:text-colors-primary dark:hover:text-white hover:-translate-y-2 ease-in-out duration-200 fa-brands fa-square-facebook"></i>
-                  <i class="hover:text-colors-primary dark:hover:text-white hover:-translate-y-2 ease-in-out duration-200 fa-brands fa-square-x-twitter"></i>
-                  <i class="hover:text-colors-primary dark:hover:text-white hover:-translate-y-2 ease-in-out duration-200 fa-brands fa-square-instagram"></i>
-                  <i class="hover:text-colors-primary dark:hover:text-white hover:-translate-y-2 ease-in-out duration-200 fa-brands fa-square-youtube"></i>
+                <div
+                  class="flex gap-2 md:gap-4 text-slate-800 dark:text-white text-2xl"
+                >
+                  <i
+                    class="hover:text-colors-primary dark:hover:text-white hover:-translate-y-2 ease-in-out duration-200 fa-brands fa-square-facebook"
+                  ></i>
+                  <i
+                    class="hover:text-colors-primary dark:hover:text-white hover:-translate-y-2 ease-in-out duration-200 fa-brands fa-square-x-twitter"
+                  ></i>
+                  <i
+                    class="hover:text-colors-primary dark:hover:text-white hover:-translate-y-2 ease-in-out duration-200 fa-brands fa-square-instagram"
+                  ></i>
+                  <i
+                    class="hover:text-colors-primary dark:hover:text-white hover:-translate-y-2 ease-in-out duration-200 fa-brands fa-square-youtube"
+                  ></i>
                 </div>
               </div>
             </div>
             <!-- End Bagian Kiri -->
 
             <!-- Bagian Kanan -->
-            <div class="lg:w-1/2 flex justify-center lg:justify-end mt-8 lg:lg:mt-0 relative">
-              <div class="w-[450px] h-[490px] md:w-[550px] md:h-[650px] lg:w-[480px] lg:h-[580px] overflow-hidden rounded-xl scale-100" data-aos="zoom-in" data-aos-duration="1000">
-                <img src="img/hero.png" alt="" class="rounded-xl w-full h-full hover:scale-110 ease-in duration-300" />
+            <div
+              class="lg:w-1/2 flex justify-center lg:justify-end mt-8 lg:lg:mt-0 relative"
+            >
+              <div
+                class="w-[450px] h-[490px] md:w-[550px] md:h-[650px] lg:w-[480px] lg:h-[580px] overflow-hidden rounded-xl scale-100"
+                data-aos="zoom-in"
+                data-aos-duration="1000"
+              >
+                <img
+                  src="img/hero.png"
+                  alt=""
+                  class="rounded-xl w-full h-full hover:scale-110 ease-in duration-300"
+                />
               </div>
 
               <!-- Quotes bawah -->
-              <div class="p-4 bg-white absolute bottom-16 md:bottom-20 -left-3 md:-left-10 lg:-left-14 w-52 md:w-60 shadow-lg rounded-xl" data-aos="fade-right" data-aos-duration="2000">
-                <p class="text-xs leading-relaxed font-bold text-slate-800">“ Belajar Itu Menyenangkan kuncinya jangan pernah menyerah oleh apapun itu ”</p>
+              <div
+                class="p-4 bg-white absolute bottom-16 md:bottom-20 -left-3 md:-left-10 lg:-left-14 w-52 md:w-60 shadow-lg rounded-xl"
+                data-aos="fade-right"
+                data-aos-duration="2000"
+              >
+                <p class="text-xs leading-relaxed font-bold text-slate-800">
+                  “ Belajar Itu Menyenangkan kuncinya jangan pernah menyerah
+                  oleh apapun itu ”
+                </p>
               </div>
 
               <!-- Quotes Atas -->
-              <div class="p-4 bg-white absolute top-[50px] md:top-[60px] -right-3 md:-right-10 lg:-right-16 w-52 md:w-64 shadow-lg rounded-xl" data-aos="fade-left" data-aos-duration="2000">
+              <div
+                class="p-4 bg-white absolute top-[50px] md:top-[60px] -right-3 md:-right-10 lg:-right-16 w-52 md:w-64 shadow-lg rounded-xl"
+                data-aos="fade-left"
+                data-aos-duration="2000"
+              >
                 <div class="flex gap-2">
                   <div class="w-14 overflow-hidden">
-                    <img src="img/foto-hero.png" alt="" class="object-cover w-full" />
+                    <img
+                      src="img/foto-hero.png"
+                      alt=""
+                      class="object-cover w-full"
+                    />
                   </div>
                   <div class="text-xs">
                     <div class="inline-block space-x-1 text-yellow-400">
@@ -218,8 +404,12 @@
                       <i class="fa-solid fa-star"></i>
                       <i class="fa-solid fa-star"></i>
                     </div>
-                    <p class="mt-2 font-semibold text-slate-800">Jika Ingin Sukses Belajarlah bersabar</p>
-                    <p class="mt-2 font-light text-slate-400">CEO Marion Lexis</p>
+                    <p class="mt-2 font-semibold text-slate-800">
+                      Jika Ingin Sukses Belajarlah bersabar
+                    </p>
+                    <p class="mt-2 font-light text-slate-400">
+                      CEO Marion Lexis
+                    </p>
                   </div>
                 </div>
               </div>
@@ -235,47 +425,106 @@
         <div class="container py-14 md:py-20">
           <div class="md:w-[90%] lg:w-[85%] mx-auto">
             <div class="title">
-              <h1 data-aos="zoom-in" data-aos-duration="1000" class="dark:text-white">Kenapa Harus <span>SMK Negeri</span> Serang?</h1>
-              <p data-aos="fade-up" data-aos-duration="1500">Alasan kenapa harus memilih untuk bergabung dengan SMK Telkom Serang.</p>
+              <h1
+                data-aos="zoom-in"
+                data-aos-duration="1000"
+                class="dark:text-white"
+              >
+                Kenapa Harus <span>SMK Negeri</span> Serang?
+              </h1>
+              <p data-aos="fade-up" data-aos-duration="1500">
+                Alasan kenapa harus memilih untuk bergabung dengan SMK Telkom
+                Serang.
+              </p>
             </div>
           </div>
 
           <!-- Content grid -->
-          <div class="pt-12 md:pt-16 grid place-items-center md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-4">
+          <div
+            class="pt-12 md:pt-16 grid place-items-center md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-4"
+          >
             <!-- grid 1 -->
-            <div class="flex flex-col items-center justify-center py-8 px-6 shadow-lg rounded-lg w-[90%] md:w-full text-center hover:-translate-y-3 ease-in duration-300 dark:bg-white" data-aos="fade-up" data-aos-duration="500">
+            <div
+              class="flex flex-col items-center justify-center py-8 px-6 shadow-lg rounded-lg w-[90%] md:w-full text-center hover:-translate-y-3 ease-in duration-300 dark:bg-white"
+              data-aos="fade-up"
+              data-aos-duration="500"
+            >
               <div class="w-16">
-                <img src="img/features-1.png" alt="" class="w-full object-cover" />
+                <img
+                  src="img/features-1.png"
+                  alt=""
+                  class="w-full object-cover"
+                />
               </div>
-              <h3 class="mt-8 text-lg font-semibold text-slate-800">Fasilitas Lengkap</h3>
-              <p class="mt-2 text-slate-600 font-light text-sm leading-relaxed">Penunjang belajar dengan kualitas terbaik</p>
+              <h3 class="mt-8 text-lg font-semibold text-slate-800">
+                Fasilitas Lengkap
+              </h3>
+              <p class="mt-2 text-slate-600 font-light text-sm leading-relaxed">
+                Penunjang belajar dengan kualitas terbaik
+              </p>
             </div>
 
             <!-- grid 2 -->
-            <div class="flex flex-col items-center justify-center py-8 px-6 shadow-lg rounded-lg w-[90%] md:w-full text-center hover:-translate-y-3 ease-in duration-300 dark:bg-white" data-aos="fade-up" data-aos-duration="1000">
+            <div
+              class="flex flex-col items-center justify-center py-8 px-6 shadow-lg rounded-lg w-[90%] md:w-full text-center hover:-translate-y-3 ease-in duration-300 dark:bg-white"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
               <div class="w-16">
-                <img src="img/features-2.png" alt="" class="w-full object-cover" />
+                <img
+                  src="img/features-2.png"
+                  alt=""
+                  class="w-full object-cover"
+                />
               </div>
-              <h3 class="mt-8 text-lg font-semibold text-slate-800">Lingkungan Nyaman</h3>
-              <p class="mt-2 text-slate-600 font-light text-sm leading-relaxed">Berada di lingkungan yang nyaman dan asri</p>
+              <h3 class="mt-8 text-lg font-semibold text-slate-800">
+                Lingkungan Nyaman
+              </h3>
+              <p class="mt-2 text-slate-600 font-light text-sm leading-relaxed">
+                Berada di lingkungan yang nyaman dan asri
+              </p>
             </div>
 
             <!-- grid 3 -->
-            <div class="flex flex-col items-center justify-center py-8 px-6 shadow-lg rounded-lg w-[90%] md:w-full text-center hover:-translate-y-3 ease-in duration-300 dark:bg-white" data-aos="fade-up" data-aos-duration="1500">
+            <div
+              class="flex flex-col items-center justify-center py-8 px-6 shadow-lg rounded-lg w-[90%] md:w-full text-center hover:-translate-y-3 ease-in duration-300 dark:bg-white"
+              data-aos="fade-up"
+              data-aos-duration="1500"
+            >
               <div class="w-16">
-                <img src="img/features-3.png" alt="" class="w-full object-cover" />
+                <img
+                  src="img/features-3.png"
+                  alt=""
+                  class="w-full object-cover"
+                />
               </div>
-              <h3 class="mt-8 text-lg font-semibold text-slate-800">Pengajar Kompeten</h3>
-              <p class="mt-2 text-slate-600 font-light text-sm leading-relaxed">Guru terbaik dengan pengalaman yang menjanjikan</p>
+              <h3 class="mt-8 text-lg font-semibold text-slate-800">
+                Pengajar Kompeten
+              </h3>
+              <p class="mt-2 text-slate-600 font-light text-sm leading-relaxed">
+                Guru terbaik dengan pengalaman yang menjanjikan
+              </p>
             </div>
 
             <!-- grid 4 -->
-            <div class="flex flex-col items-center justify-center py-8 px-6 shadow-lg rounded-lg w-[90%] md:w-full text-center hover:-translate-y-3 ease-in duration-300 dark:bg-white" data-aos="fade-up" data-aos-duration="2000">
+            <div
+              class="flex flex-col items-center justify-center py-8 px-6 shadow-lg rounded-lg w-[90%] md:w-full text-center hover:-translate-y-3 ease-in duration-300 dark:bg-white"
+              data-aos="fade-up"
+              data-aos-duration="2000"
+            >
               <div class="w-16">
-                <img src="img/features-4.png" alt="" class="w-full object-cover" />
+                <img
+                  src="img/features-4.png"
+                  alt=""
+                  class="w-full object-cover"
+                />
               </div>
-              <h3 class="mt-8 text-lg font-semibold text-slate-800">Kerja Sama Luas</h3>
-              <p class="mt-2 text-slate-600 font-light text-sm leading-relaxed">Dapat kesempatan kerja yang lebih terjamin</p>
+              <h3 class="mt-8 text-lg font-semibold text-slate-800">
+                Kerja Sama Luas
+              </h3>
+              <p class="mt-2 text-slate-600 font-light text-sm leading-relaxed">
+                Dapat kesempatan kerja yang lebih terjamin
+              </p>
             </div>
           </div>
         </div>
@@ -286,25 +535,62 @@
       <section id="profile" class="bg-white dark:bg-dark-color -mb-8 pt-8">
         <div class="container py-14 md:py-20">
           <div class="title-2">
-            <h1 data-aos="zoom-in" data-aos-duration="1000" class="dark:text-white">
+            <h1
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+              class="dark:text-white"
+            >
               Profil <span>SMK Negeri</span> <br />
               Serang
             </h1>
           </div>
 
           <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-12">
-            <div class="w-full h-full md:w-[580px] md:h-[405px] lg:w-[550px] lg:h-[380px] overflow-hidden rounded-2xl" data-aos="fade-right" data-aos-duration="1500">
-              <img src="img/foto-profile.png" alt="" class="w-full h-full object-fill hover:scale-125 ease-in duration-300" />
+            <div
+              class="w-full h-full md:w-[580px] md:h-[405px] lg:w-[550px] lg:h-[380px] overflow-hidden rounded-2xl"
+              data-aos="fade-right"
+              data-aos-duration="1500"
+            >
+              <img
+                src="img/foto-profile.png"
+                alt=""
+                class="w-full h-full object-fill hover:scale-125 ease-in duration-300"
+              />
             </div>
 
             <div class="text-center lg:text-start lg:w-1/2">
-              <h1 data-aos="fade-left" data-aos-duration="1000" class="text-xl md:text-2xl text-slate-800 font-bold leading-relaxed dark:text-white">Sembutan Kepala Sekolah SMK Negeri Serang</h1>
-              <p data-aos="fade-left" data-aos-duration="1500" class="mt-10 lg:mt-12 mb-4 text-slate-400 leading-relaxed text-sm md:text-base text-justify">
-                sekolah adalah tempat mencetak penerus bangsa yang berkualitas dan berprestasi di segala bidang yang dapat bersaing di dunia internasional
+              <h1
+                data-aos="fade-left"
+                data-aos-duration="1000"
+                class="text-xl md:text-2xl text-slate-800 font-bold leading-relaxed dark:text-white"
+              >
+                Sembutan Kepala Sekolah SMK Negeri Serang
+              </h1>
+              <p
+                data-aos="fade-left"
+                data-aos-duration="1500"
+                class="mt-10 lg:mt-12 mb-4 text-slate-400 leading-relaxed text-sm md:text-base text-justify"
+              >
+                sekolah adalah tempat mencetak penerus bangsa yang berkualitas
+                dan berprestasi di segala bidang yang dapat bersaing di dunia
+                internasional
               </p>
-              <p data-aos="fade-left" data-aos-duration="2000" class="text-slate-400 leading-relaxed text-sm md:text-base text-justify">dan Sekolah adalah tempat anak-anak mendapatkan dukungan untuk melengkapi pembelajarannya di sekola</p>
+              <p
+                data-aos="fade-left"
+                data-aos-duration="2000"
+                class="text-slate-400 leading-relaxed text-sm md:text-base text-justify"
+              >
+                dan Sekolah adalah tempat anak-anak mendapatkan dukungan untuk
+                melengkapi pembelajarannya di sekola
+              </p>
 
-              <button data-aos="fade-up" data-aos-duration="2000" class="btn mt-16">Baca Selengkapnya <i class="fa-solid fa-chevron-right ms-2"></i></button>
+              <button
+                data-aos="fade-up"
+                data-aos-duration="2000"
+                class="btn mt-16"
+              >
+                Baca Selengkapnya <i class="fa-solid fa-chevron-right ms-2"></i>
+              </button>
             </div>
           </div>
         </div>
@@ -315,87 +601,173 @@
       <section id="program" class="bg-white dark:bg-dark-color -mb-8 pt-8">
         <div class="container py-14 md:py-20">
           <div class="title-2">
-            <h1 data-aos="zoom-in" data-aos-duration="1000" class="dark:text-white">Jurusan Di <span>SMK Negeri</span> Serang</h1>
-            <p data-aos="fade-up" data-aos-duration="1500">Pilihan program keahlian di SMK Negeri Serang.</p>
+            <h1
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+              class="dark:text-white"
+            >
+              Jurusan Di <span>SMK Negeri</span> Serang
+            </h1>
+            <p data-aos="fade-up" data-aos-duration="1500">
+              Pilihan program keahlian di SMK Negeri Serang.
+            </p>
           </div>
 
           <!-- Grid Content -->
-          <div class="grid md:grid-cols-2 lg:grid-cols-3 place-items-center gap-8">
+          <div
+            class="grid md:grid-cols-2 lg:grid-cols-3 place-items-center gap-8"
+          >
             <!-- Content 1 -->
-            <div data-aos="fade-right" data-aos-duration="1000" class="w-3/4 md:w-full space-y-8 py-6 px-4 bg-colors-primary rounded-xl flex flex-col items-center text-center hover:-translate-y-2 ease-in duration-300">
+            <div
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              class="w-3/4 md:w-full space-y-8 py-6 px-4 bg-colors-primary rounded-xl flex flex-col items-center text-center hover:-translate-y-2 ease-in duration-300"
+            >
               <div class="w-12 p-2 bg-white rounded-lg">
-                <img src="img/jurusan-komputer.png" alt="" class="w-full h-full object-fill" />
+                <img
+                  src="img/jurusan-komputer.png"
+                  alt=""
+                  class="w-full h-full object-fill"
+                />
               </div>
               <div>
-                <h1 class="font-bold text-white">TEKNIK Komputer Dan Jaringan</h1>
+                <h1 class="font-bold text-white">
+                  TEKNIK Komputer Dan Jaringan
+                </h1>
               </div>
               <div>
-                <a href="" class="text-sm text-[#DBDBDB] hover:text-white hover:font-semibold transition-colors duration-200 ease-in">Details</a>
+                <a
+                  href=""
+                  class="text-sm text-[#DBDBDB] hover:text-white hover:font-semibold transition-colors duration-200 ease-in"
+                  >Details</a
+                >
               </div>
             </div>
 
             <!-- Content 2 -->
-            <div data-aos="fade-down" data-aos-duration="1500" class="w-3/4 md:w-full space-y-8 py-6 px-4 bg-colors-primary rounded-xl flex flex-col items-center text-center hover:-translate-y-2 ease-in duration-300">
+            <div
+              data-aos="fade-down"
+              data-aos-duration="1500"
+              class="w-3/4 md:w-full space-y-8 py-6 px-4 bg-colors-primary rounded-xl flex flex-col items-center text-center hover:-translate-y-2 ease-in duration-300"
+            >
               <div class="w-12 p-2 bg-white rounded-lg">
-                <img src="img/jurusan-perhotelan.png" alt="" class="w-full h-full object-fill" />
+                <img
+                  src="img/jurusan-perhotelan.png"
+                  alt=""
+                  class="w-full h-full object-fill"
+                />
               </div>
               <div>
                 <h1 class="font-bold text-white">Perhotelan</h1>
               </div>
               <div>
-                <a href="" class="text-sm text-[#DBDBDB] hover:text-white hover:font-semibold transition-colors duration-200 ease-in">Details</a>
+                <a
+                  href=""
+                  class="text-sm text-[#DBDBDB] hover:text-white hover:font-semibold transition-colors duration-200 ease-in"
+                  >Details</a
+                >
               </div>
             </div>
 
             <!-- Content 3 -->
-            <div data-aos="fade-left" data-aos-duration="2000" class="w-3/4 md:w-full space-y-8 py-6 px-4 bg-colors-primary rounded-xl flex flex-col items-center text-center hover:-translate-y-2 ease-in duration-300">
+            <div
+              data-aos="fade-left"
+              data-aos-duration="2000"
+              class="w-3/4 md:w-full space-y-8 py-6 px-4 bg-colors-primary rounded-xl flex flex-col items-center text-center hover:-translate-y-2 ease-in duration-300"
+            >
               <div class="w-12 p-2 bg-white rounded-lg">
-                <img src="img/jurusan-rekayasa.png" alt="" class="w-full h-full object-fill" />
+                <img
+                  src="img/jurusan-rekayasa.png"
+                  alt=""
+                  class="w-full h-full object-fill"
+                />
               </div>
               <div>
                 <h1 class="font-bold text-white">Rekayasa perangkat lunak</h1>
               </div>
               <div>
-                <a href="" class="text-sm text-[#DBDBDB] hover:text-white hover:font-semibold transition-colors duration-200 ease-in">Details</a>
+                <a
+                  href=""
+                  class="text-sm text-[#DBDBDB] hover:text-white hover:font-semibold transition-colors duration-200 ease-in"
+                  >Details</a
+                >
               </div>
             </div>
 
             <!-- Content 4 -->
-            <div data-aos="fade-right" data-aos-duration="1000" class="w-3/4 md:w-full space-y-8 py-6 px-4 bg-colors-primary rounded-xl flex flex-col items-center text-center hover:-translate-y-2 ease-in duration-300">
+            <div
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              class="w-3/4 md:w-full space-y-8 py-6 px-4 bg-colors-primary rounded-xl flex flex-col items-center text-center hover:-translate-y-2 ease-in duration-300"
+            >
               <div class="w-12 p-2 bg-white rounded-lg">
-                <img src="img/jurusan-arsitekstur.png" alt="" class="w-full h-full object-fill" />
+                <img
+                  src="img/jurusan-arsitekstur.png"
+                  alt=""
+                  class="w-full h-full object-fill"
+                />
               </div>
               <div>
                 <h1 class="font-bold text-white">Arsitektur</h1>
               </div>
               <div>
-                <a href="" class="text-sm text-[#DBDBDB] hover:text-white hover:font-semibold transition-colors duration-200 ease-in">Details</a>
+                <a
+                  href=""
+                  class="text-sm text-[#DBDBDB] hover:text-white hover:font-semibold transition-colors duration-200 ease-in"
+                  >Details</a
+                >
               </div>
             </div>
 
             <!-- Content 5 -->
-            <div data-aos="fade-up" data-aos-duration="1500" class="w-3/4 md:w-full space-y-8 py-6 px-4 bg-colors-primary rounded-xl flex flex-col items-center text-center hover:-translate-y-2 ease-in duration-300">
+            <div
+              data-aos="fade-up"
+              data-aos-duration="1500"
+              class="w-3/4 md:w-full space-y-8 py-6 px-4 bg-colors-primary rounded-xl flex flex-col items-center text-center hover:-translate-y-2 ease-in duration-300"
+            >
               <div class="w-12 p-2 bg-white rounded-lg">
-                <img src="img/jurusan-audio.png" alt="" class="w-full h-full object-fill" />
+                <img
+                  src="img/jurusan-audio.png"
+                  alt=""
+                  class="w-full h-full object-fill"
+                />
               </div>
               <div>
                 <h1 class="font-bold text-white">Teknik Audio Video</h1>
               </div>
               <div>
-                <a href="" class="text-sm text-[#DBDBDB] hover:text-white hover:font-semibold transition-colors duration-200 ease-in">Details</a>
+                <a
+                  href=""
+                  class="text-sm text-[#DBDBDB] hover:text-white hover:font-semibold transition-colors duration-200 ease-in"
+                  >Details</a
+                >
               </div>
             </div>
 
             <!-- Content 6 -->
-            <div data-aos="fade-left" data-aos-duration="2000" class="w-3/4 md:w-full space-y-8 py-6 px-4 bg-colors-primary rounded-xl flex flex-col items-center text-center hover:-translate-y-2 ease-in duration-300">
+            <div
+              data-aos="fade-left"
+              data-aos-duration="2000"
+              class="w-3/4 md:w-full space-y-8 py-6 px-4 bg-colors-primary rounded-xl flex flex-col items-center text-center hover:-translate-y-2 ease-in duration-300"
+            >
               <div class="w-12 p-2 bg-white rounded-lg">
-                <img src="img/jurusan-teknik-listrik.png" alt="" class="w-full h-full object-fill" />
+                <img
+                  src="img/jurusan-teknik-listrik.png"
+                  alt=""
+                  class="w-full h-full object-fill"
+                />
               </div>
               <div>
-                <h1 class="font-bold text-white">Teknik Instalasi Tenaga Listrik</h1>
+                <h1 class="font-bold text-white">
+                  Teknik Instalasi Tenaga Listrik
+                </h1>
               </div>
               <div>
-                <a href="" class="text-sm text-[#DBDBDB] hover:text-white hover:font-semibold transition-colors duration-200 ease-in">Details</a>
+                <a
+                  href=""
+                  class="text-sm text-[#DBDBDB] hover:text-white hover:font-semibold transition-colors duration-200 ease-in"
+                  >Details</a
+                >
               </div>
             </div>
           </div>
@@ -404,60 +776,133 @@
       <!-- End Jurusan Section -->
 
       <!-- Extrakulikuler section -->
-      <section id="extra" class="bg-[#F0EFFF] dark:bg-dark-color-light -mb-8 pt-8 pb-10">
+      <section
+        id="extra"
+        class="bg-[#F0EFFF] dark:bg-dark-color-light -mb-8 pt-8 pb-10"
+      >
         <div class="container py-14 md:py-20">
           <div class="title-2">
-            <h1 data-aos="zoom-in" data-aos-duration="1000" class="dark:text-white">Ekstrakulikuler Di <span>SMK Negeri</span> Serang</h1>
-            <p data-aos="fade-up" data-aos-duration="1500">Pilihan Ekstrakulikuler di SMK Negeri Serang.</p>
+            <h1
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+              class="dark:text-white"
+            >
+              Ekstrakulikuler Di <span>SMK Negeri</span> Serang
+            </h1>
+            <p data-aos="fade-up" data-aos-duration="1500">
+              Pilihan Ekstrakulikuler di SMK Negeri Serang.
+            </p>
           </div>
 
           <!-- Grid content -->
-          <div class="grid place-items-center md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div
+            class="grid place-items-center md:grid-cols-2 lg:grid-cols-4 gap-8"
+          >
             <!-- content 1 -->
-            <div data-aos="zoom-in" data-aos-duration="1000" class="p-4 bg-white shadow-md space-y-6 w-3/4 md:w-full rounded-xl hover:-translate-y-2 ease-in duration-200">
+            <div
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+              class="p-4 bg-white shadow-md space-y-6 w-3/4 md:w-full rounded-xl hover:-translate-y-2 ease-in duration-200"
+            >
               <div class="w-12">
-                <img src="img/extra-1.png" alt="" class="w-full h-full object-fill" />
+                <img
+                  src="img/extra-1.png"
+                  alt=""
+                  class="w-full h-full object-fill"
+                />
               </div>
               <div>
-                <h1 class="font-bold text-slate-800 text-lg">Praja Muda Karana</h1>
-                <p class="my-4 text-slate-400 text-sm font-light">Pertama kali dibentuk team tahun 2002</p>
-                <a href="" class="text-sm text-[#DBDBDB] hover:text-slate-800 hover:font-semibold transition-colors duration-200 ease-in">Details</a>
+                <h1 class="font-bold text-slate-800 text-lg">
+                  Praja Muda Karana
+                </h1>
+                <p class="my-4 text-slate-400 text-sm font-light">
+                  Pertama kali dibentuk team tahun 2002
+                </p>
+                <a
+                  href=""
+                  class="text-sm text-[#DBDBDB] hover:text-slate-800 hover:font-semibold transition-colors duration-200 ease-in"
+                  >Details</a
+                >
               </div>
             </div>
 
             <!-- content 2 -->
-            <div data-aos="zoom-in" data-aos-duration="1000" class="p-4 bg-white shadow-md space-y-6 w-3/4 md:w-full rounded-xl hover:-translate-y-2 ease-in duration-200">
+            <div
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+              class="p-4 bg-white shadow-md space-y-6 w-3/4 md:w-full rounded-xl hover:-translate-y-2 ease-in duration-200"
+            >
               <div class="w-12">
-                <img src="img/extra-2.png" alt="" class="w-full h-full object-fill" />
+                <img
+                  src="img/extra-2.png"
+                  alt=""
+                  class="w-full h-full object-fill"
+                />
               </div>
               <div>
-                <h1 class="font-bold text-slate-800 text-lg">Palang Merah Remaja</h1>
-                <p class="my-4 text-slate-400 text-sm font-light">Pertama kali dibentuk team tahun 2003</p>
-                <a href="" class="text-sm text-[#DBDBDB] hover:text-slate-800 hover:font-semibold transition-colors duration-200 ease-in">Details</a>
+                <h1 class="font-bold text-slate-800 text-lg">
+                  Palang Merah Remaja
+                </h1>
+                <p class="my-4 text-slate-400 text-sm font-light">
+                  Pertama kali dibentuk team tahun 2003
+                </p>
+                <a
+                  href=""
+                  class="text-sm text-[#DBDBDB] hover:text-slate-800 hover:font-semibold transition-colors duration-200 ease-in"
+                  >Details</a
+                >
               </div>
             </div>
 
             <!-- content 3 -->
-            <div data-aos="zoom-in" data-aos-duration="1000" class="p-4 bg-white shadow-md space-y-6 w-3/4 md:w-full rounded-xl hover:-translate-y-2 ease-in duration-200">
+            <div
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+              class="p-4 bg-white shadow-md space-y-6 w-3/4 md:w-full rounded-xl hover:-translate-y-2 ease-in duration-200"
+            >
               <div class="w-12">
-                <img src="img/extra-3.png" alt="" class="w-full h-full object-fill" />
+                <img
+                  src="img/extra-3.png"
+                  alt=""
+                  class="w-full h-full object-fill"
+                />
               </div>
               <div>
                 <h1 class="font-bold text-slate-800 text-lg">Pecinta Alam</h1>
-                <p class="my-4 text-slate-400 text-sm font-light">Pertama kali dibentuk team tahun 2008</p>
-                <a href="" class="text-sm text-[#DBDBDB] hover:text-slate-800 hover:font-semibold transition-colors duration-200 ease-in">Details</a>
+                <p class="my-4 text-slate-400 text-sm font-light">
+                  Pertama kali dibentuk team tahun 2008
+                </p>
+                <a
+                  href=""
+                  class="text-sm text-[#DBDBDB] hover:text-slate-800 hover:font-semibold transition-colors duration-200 ease-in"
+                  >Details</a
+                >
               </div>
             </div>
 
             <!-- content 4 -->
-            <div data-aos="zoom-in" data-aos-duration="1000" class="p-4 bg-white shadow-md space-y-6 w-3/4 md:w-full rounded-xl hover:-translate-y-2 ease-in duration-200">
+            <div
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+              class="p-4 bg-white shadow-md space-y-6 w-3/4 md:w-full rounded-xl hover:-translate-y-2 ease-in duration-200"
+            >
               <div class="w-12">
-                <img src="img/extra-4.png" alt="" class="w-full h-full object-fill" />
+                <img
+                  src="img/extra-4.png"
+                  alt=""
+                  class="w-full h-full object-fill"
+                />
               </div>
               <div>
                 <h1 class="font-bold text-slate-800 text-lg">Sinematografi</h1>
-                <p class="my-4 text-slate-400 text-sm font-light">Pertama kali dibentuk team tahun 2016</p>
-                <a href="" class="text-sm text-[#DBDBDB] hover:text-slate-800 hover:font-semibold transition-colors duration-200 ease-in">Details</a>
+                <p class="my-4 text-slate-400 text-sm font-light">
+                  Pertama kali dibentuk team tahun 2016
+                </p>
+                <a
+                  href=""
+                  class="text-sm text-[#DBDBDB] hover:text-slate-800 hover:font-semibold transition-colors duration-200 ease-in"
+                  >Details</a
+                >
               </div>
             </div>
           </div>
@@ -469,175 +914,349 @@
       <section id="berita" class="bg-white dark:bg-dark-color -mb-8 pt-8 pb-8">
         <div class="container py-14 md:py-20">
           <div class="title-2">
-            <h1 data-aos="zoom-in" data-aos-duration="1000" class="dark:text-white">Berita Terbaru Di <span>SMK Negeri</span> Serang</h1>
-            <p data-aos="fade-up" data-aos-duration="1500">Berita Terbaru Tentang SMK Negeri Serang.</p>
+            <h1
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+              class="dark:text-white"
+            >
+              Berita Terbaru Di <span>SMK Negeri</span> Serang
+            </h1>
+            <p data-aos="fade-up" data-aos-duration="1500">
+              Berita Terbaru Tentang SMK Negeri Serang.
+            </p>
           </div>
 
           <!-- Grid Content -->
-          <div class="grid place-items-center md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div
+            class="grid place-items-center md:grid-cols-2 lg:grid-cols-4 gap-8"
+          >
             <!-- content 1 -->
-            <div data-aos="zoom-in" data-aos-duration="1000" class="w-full bg-white shadow-lg rounded-xl dark:bg-dark-color-light">
+            <div
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+              class="w-full bg-white shadow-lg rounded-xl dark:bg-dark-color-light"
+            >
               <div class="overflow-hidden rounded-t-xl">
-                <img src="img/blog-1.png" alt="" class="w-full h-full object-cover rounded-t-xl hover:scale-125 ease-in duration-300" />
+                <img
+                  src="img/blog-1.png"
+                  alt=""
+                  class="w-full h-full object-cover rounded-t-xl hover:scale-125 ease-in duration-300"
+                />
               </div>
               <div class="mt-1 p-4 space-y-3">
-                <p class="text-xs text-slate-400 dark:text-white tracking-wide">13 December 2023</p>
+                <p class="text-xs text-slate-400 dark:text-white tracking-wide">
+                  13 December 2023
+                </p>
                 <div>
                   <a href=""
-                    ><h1 class="font-bold leading-relaxed text-slate-800 dark:text-white underline hover:no-underline hover:text-colors-primary transition-colors ease-in duration-200">Pendaftaran SMK Negeri Serang Telah Dibuka !</h1></a
+                    ><h1
+                      class="font-bold leading-relaxed text-slate-800 dark:text-white underline hover:no-underline hover:text-colors-primary transition-colors ease-in duration-200"
+                    >
+                      Pendaftaran SMK Negeri Serang Telah Dibuka !
+                    </h1></a
                   >
                 </div>
-                <p class="text-xs text-slate-400 dark:text-white tracking-wide">By Admin SmkNs</p>
+                <p class="text-xs text-slate-400 dark:text-white tracking-wide">
+                  By Admin SmkNs
+                </p>
 
                 <div class="pt-4">
-                  <a href="" class="font-semibold text-colors-primary tracking-wide text-xs hover:text-slate-800 hover:font-bold transition-colors ease-in duration-200 dark:hover:text-white">Baca Selengkapnya</a>
+                  <a
+                    href=""
+                    class="font-semibold text-colors-primary tracking-wide text-xs hover:text-slate-800 hover:font-bold transition-colors ease-in duration-200 dark:hover:text-white"
+                    >Baca Selengkapnya</a
+                  >
                 </div>
               </div>
             </div>
 
             <!-- content 2 -->
-            <div data-aos="zoom-in" data-aos-duration="1000" class="w-full bg-white shadow-lg rounded-xl dark:bg-dark-color-light">
+            <div
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+              class="w-full bg-white shadow-lg rounded-xl dark:bg-dark-color-light"
+            >
               <div class="overflow-hidden rounded-t-xl">
-                <img src="img/blog-2.png" alt="" class="w-full h-full object-cover rounded-t-xl hover:scale-125 ease-in duration-300" />
+                <img
+                  src="img/blog-2.png"
+                  alt=""
+                  class="w-full h-full object-cover rounded-t-xl hover:scale-125 ease-in duration-300"
+                />
               </div>
               <div class="mt-1 p-4 space-y-3">
-                <p class="text-xs text-slate-400 tracking-wide dark:text-white">13 December 2023</p>
+                <p class="text-xs text-slate-400 tracking-wide dark:text-white">
+                  13 December 2023
+                </p>
                 <div>
                   <a href=""
-                    ><h1 class="font-bold leading-relaxed text-slate-800 underline hover:no-underline hover:text-colors-primary transition-colors ease-in duration-200 dark:text-white">Pendaftaran SMK Negeri Serang Telah Dibuka !</h1></a
+                    ><h1
+                      class="font-bold leading-relaxed text-slate-800 underline hover:no-underline hover:text-colors-primary transition-colors ease-in duration-200 dark:text-white"
+                    >
+                      Pendaftaran SMK Negeri Serang Telah Dibuka !
+                    </h1></a
                   >
                 </div>
-                <p class="text-xs text-slate-400 tracking-wide dark:text-white">By Admin SmkNs</p>
+                <p class="text-xs text-slate-400 tracking-wide dark:text-white">
+                  By Admin SmkNs
+                </p>
 
                 <div class="pt-4">
-                  <a href="" class="font-semibold text-colors-primary tracking-wide text-xs hover:text-slate-800 hover:font-bold transition-colors ease-in duration-200 dark:hover:text-white">Baca Selengkapnya</a>
+                  <a
+                    href=""
+                    class="font-semibold text-colors-primary tracking-wide text-xs hover:text-slate-800 hover:font-bold transition-colors ease-in duration-200 dark:hover:text-white"
+                    >Baca Selengkapnya</a
+                  >
                 </div>
               </div>
             </div>
 
             <!-- content 3 -->
-            <div data-aos="zoom-in" data-aos-duration="1000" class="w-full bg-white shadow-lg rounded-xl dark:bg-dark-color-light">
+            <div
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+              class="w-full bg-white shadow-lg rounded-xl dark:bg-dark-color-light"
+            >
               <div class="overflow-hidden rounded-t-xl">
-                <img src="img/blog-3.png" alt="" class="w-full h-full object-cover rounded-t-xl hover:scale-125 ease-in duration-300" />
+                <img
+                  src="img/blog-3.png"
+                  alt=""
+                  class="w-full h-full object-cover rounded-t-xl hover:scale-125 ease-in duration-300"
+                />
               </div>
               <div class="mt-1 p-4 space-y-3">
-                <p class="text-xs text-slate-400 tracking-wide dark:text-white">13 December 2023</p>
+                <p class="text-xs text-slate-400 tracking-wide dark:text-white">
+                  13 December 2023
+                </p>
                 <div>
                   <a href=""
-                    ><h1 class="font-bold leading-relaxed text-slate-800 underline hover:no-underline hover:text-colors-primary transition-colors ease-in duration-200 dark:text-white">Pendaftaran SMK Negeri Serang Telah Dibuka !</h1></a
+                    ><h1
+                      class="font-bold leading-relaxed text-slate-800 underline hover:no-underline hover:text-colors-primary transition-colors ease-in duration-200 dark:text-white"
+                    >
+                      Pendaftaran SMK Negeri Serang Telah Dibuka !
+                    </h1></a
                   >
                 </div>
-                <p class="text-xs text-slate-400 tracking-wide dark:text-white">By Admin SmkNs</p>
+                <p class="text-xs text-slate-400 tracking-wide dark:text-white">
+                  By Admin SmkNs
+                </p>
 
                 <div class="pt-4">
-                  <a href="" class="font-semibold text-colors-primary tracking-wide text-xs hover:text-slate-800 hover:font-bold transition-colors ease-in duration-200 dark:hover:text-white">Baca Selengkapnya</a>
+                  <a
+                    href=""
+                    class="font-semibold text-colors-primary tracking-wide text-xs hover:text-slate-800 hover:font-bold transition-colors ease-in duration-200 dark:hover:text-white"
+                    >Baca Selengkapnya</a
+                  >
                 </div>
               </div>
             </div>
 
             <!-- content 4 -->
-            <div data-aos="zoom-in" data-aos-duration="1000" class="w-full bg-white shadow-lg rounded-xl dark:bg-dark-color-light">
+            <div
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+              class="w-full bg-white shadow-lg rounded-xl dark:bg-dark-color-light"
+            >
               <div class="overflow-hidden rounded-t-xl">
-                <img src="img/blog-4.png" alt="" class="w-full h-full object-cover rounded-t-xl hover:scale-125 ease-in duration-300" />
+                <img
+                  src="img/blog-4.png"
+                  alt=""
+                  class="w-full h-full object-cover rounded-t-xl hover:scale-125 ease-in duration-300"
+                />
               </div>
               <div class="mt-1 p-4 space-y-3">
-                <p class="text-xs text-slate-400 tracking-wide dark:text-white">13 December 2023</p>
+                <p class="text-xs text-slate-400 tracking-wide dark:text-white">
+                  13 December 2023
+                </p>
                 <div>
                   <a href=""
-                    ><h1 class="font-bold leading-relaxed text-slate-800 underline hover:no-underline hover:text-colors-primary transition-colors ease-in duration-200 dark:text-white">Pendaftaran SMK Negeri Serang Telah Dibuka !</h1></a
+                    ><h1
+                      class="font-bold leading-relaxed text-slate-800 underline hover:no-underline hover:text-colors-primary transition-colors ease-in duration-200 dark:text-white"
+                    >
+                      Pendaftaran SMK Negeri Serang Telah Dibuka !
+                    </h1></a
                   >
                 </div>
-                <p class="text-xs text-slate-400 tracking-wide dark:text-white">By Admin SmkNs</p>
+                <p class="text-xs text-slate-400 tracking-wide dark:text-white">
+                  By Admin SmkNs
+                </p>
 
                 <div class="pt-4">
-                  <a href="" class="font-semibold text-colors-primary tracking-wide text-xs hover:text-slate-800 hover:font-bold transition-colors ease-in duration-200 dark:hover:text-white">Baca Selengkapnya</a>
+                  <a
+                    href=""
+                    class="font-semibold text-colors-primary tracking-wide text-xs hover:text-slate-800 hover:font-bold transition-colors ease-in duration-200 dark:hover:text-white"
+                    >Baca Selengkapnya</a
+                  >
                 </div>
               </div>
             </div>
 
             <!-- content 5 -->
-            <div data-aos="zoom-in" data-aos-duration="1000" class="w-full bg-white shadow-lg rounded-xl dark:bg-dark-color-light">
+            <div
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+              class="w-full bg-white shadow-lg rounded-xl dark:bg-dark-color-light"
+            >
               <div class="overflow-hidden rounded-t-xl">
-                <img src="img/blog-5.png" alt="" class="w-full h-full object-cover rounded-t-xl hover:scale-125 ease-in duration-300" />
+                <img
+                  src="img/blog-5.png"
+                  alt=""
+                  class="w-full h-full object-cover rounded-t-xl hover:scale-125 ease-in duration-300"
+                />
               </div>
               <div class="mt-1 p-4 space-y-3">
-                <p class="text-xs text-slate-400 tracking-wide dark:text-white">13 December 2023</p>
+                <p class="text-xs text-slate-400 tracking-wide dark:text-white">
+                  13 December 2023
+                </p>
                 <div>
                   <a href=""
-                    ><h1 class="font-bold leading-relaxed text-slate-800 underline hover:no-underline hover:text-colors-primary transition-colors ease-in duration-200 dark:text-white">Pendaftaran SMK Negeri Serang Telah Dibuka !</h1></a
+                    ><h1
+                      class="font-bold leading-relaxed text-slate-800 underline hover:no-underline hover:text-colors-primary transition-colors ease-in duration-200 dark:text-white"
+                    >
+                      Pendaftaran SMK Negeri Serang Telah Dibuka !
+                    </h1></a
                   >
                 </div>
-                <p class="text-xs text-slate-400 tracking-wide dark:text-white">By Admin SmkNs</p>
+                <p class="text-xs text-slate-400 tracking-wide dark:text-white">
+                  By Admin SmkNs
+                </p>
 
                 <div class="pt-4">
-                  <a href="" class="font-semibold text-colors-primary tracking-wide text-xs hover:text-slate-800 hover:font-bold transition-colors ease-in duration-200 dark:hover:text-white">Baca Selengkapnya</a>
+                  <a
+                    href=""
+                    class="font-semibold text-colors-primary tracking-wide text-xs hover:text-slate-800 hover:font-bold transition-colors ease-in duration-200 dark:hover:text-white"
+                    >Baca Selengkapnya</a
+                  >
                 </div>
               </div>
             </div>
 
             <!-- content 6 -->
-            <div data-aos="zoom-in" data-aos-duration="1000" class="w-full bg-white shadow-lg rounded-xl dark:bg-dark-color-light">
+            <div
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+              class="w-full bg-white shadow-lg rounded-xl dark:bg-dark-color-light"
+            >
               <div class="overflow-hidden rounded-t-xl">
-                <img src="img/blog-6.png" alt="" class="w-full h-full object-cover rounded-t-xl hover:scale-125 ease-in duration-300" />
+                <img
+                  src="img/blog-6.png"
+                  alt=""
+                  class="w-full h-full object-cover rounded-t-xl hover:scale-125 ease-in duration-300"
+                />
               </div>
               <div class="mt-1 p-4 space-y-3">
-                <p class="text-xs text-slate-400 tracking-wide dark:text-white">13 December 2023</p>
+                <p class="text-xs text-slate-400 tracking-wide dark:text-white">
+                  13 December 2023
+                </p>
                 <div>
                   <a href=""
-                    ><h1 class="font-bold leading-relaxed text-slate-800 underline hover:no-underline hover:text-colors-primary transition-colors ease-in duration-200 dark:text-white">Pendaftaran SMK Negeri Serang Telah Dibuka !</h1></a
+                    ><h1
+                      class="font-bold leading-relaxed text-slate-800 underline hover:no-underline hover:text-colors-primary transition-colors ease-in duration-200 dark:text-white"
+                    >
+                      Pendaftaran SMK Negeri Serang Telah Dibuka !
+                    </h1></a
                   >
                 </div>
-                <p class="text-xs text-slate-400 tracking-wide dark:text-white">By Admin SmkNs</p>
+                <p class="text-xs text-slate-400 tracking-wide dark:text-white">
+                  By Admin SmkNs
+                </p>
 
                 <div class="pt-4">
-                  <a href="" class="font-semibold text-colors-primary tracking-wide text-xs hover:text-slate-800 hover:font-bold transition-colors ease-in duration-200 dark:hover:text-white">Baca Selengkapnya</a>
+                  <a
+                    href=""
+                    class="font-semibold text-colors-primary tracking-wide text-xs hover:text-slate-800 hover:font-bold transition-colors ease-in duration-200 dark:hover:text-white"
+                    >Baca Selengkapnya</a
+                  >
                 </div>
               </div>
             </div>
 
             <!-- content 7 -->
-            <div data-aos="zoom-in" data-aos-duration="1000" class="w-full bg-white shadow-lg rounded-xl dark:bg-dark-color-light">
+            <div
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+              class="w-full bg-white shadow-lg rounded-xl dark:bg-dark-color-light"
+            >
               <div class="overflow-hidden rounded-t-xl">
-                <img src="img/blog-7.png" alt="" class="w-full h-full object-cover rounded-t-xl hover:scale-125 ease-in duration-300" />
+                <img
+                  src="img/blog-7.png"
+                  alt=""
+                  class="w-full h-full object-cover rounded-t-xl hover:scale-125 ease-in duration-300"
+                />
               </div>
               <div class="mt-1 p-4 space-y-3">
-                <p class="text-xs text-slate-400 tracking-wide dark:text-white">13 December 2023</p>
+                <p class="text-xs text-slate-400 tracking-wide dark:text-white">
+                  13 December 2023
+                </p>
                 <div>
                   <a href=""
-                    ><h1 class="font-bold leading-relaxed text-slate-800 underline hover:no-underline hover:text-colors-primary transition-colors ease-in duration-200 dark:text-white">Pendaftaran SMK Negeri Serang Telah Dibuka !</h1></a
+                    ><h1
+                      class="font-bold leading-relaxed text-slate-800 underline hover:no-underline hover:text-colors-primary transition-colors ease-in duration-200 dark:text-white"
+                    >
+                      Pendaftaran SMK Negeri Serang Telah Dibuka !
+                    </h1></a
                   >
                 </div>
-                <p class="text-xs text-slate-400 tracking-wide dark:text-white">By Admin SmkNs</p>
+                <p class="text-xs text-slate-400 tracking-wide dark:text-white">
+                  By Admin SmkNs
+                </p>
 
                 <div class="pt-4">
-                  <a href="" class="font-semibold text-colors-primary tracking-wide text-xs hover:text-slate-800 hover:font-bold transition-colors ease-in duration-200 dark:hover:text-white">Baca Selengkapnya</a>
+                  <a
+                    href=""
+                    class="font-semibold text-colors-primary tracking-wide text-xs hover:text-slate-800 hover:font-bold transition-colors ease-in duration-200 dark:hover:text-white"
+                    >Baca Selengkapnya</a
+                  >
                 </div>
               </div>
             </div>
 
             <!-- content 8 -->
-            <div data-aos="zoom-in" data-aos-duration="1000" class="w-full bg-white shadow-lg rounded-xl dark:bg-dark-color-light">
+            <div
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+              class="w-full bg-white shadow-lg rounded-xl dark:bg-dark-color-light"
+            >
               <div class="overflow-hidden rounded-t-xl">
-                <img src="img/blog-8.png" alt="" class="w-full h-full object-cover rounded-t-xl hover:scale-125 ease-in duration-300" />
+                <img
+                  src="img/blog-8.png"
+                  alt=""
+                  class="w-full h-full object-cover rounded-t-xl hover:scale-125 ease-in duration-300"
+                />
               </div>
               <div class="mt-1 p-4 space-y-3">
-                <p class="text-xs text-slate-400 tracking-wide dark:text-white">13 December 2023</p>
+                <p class="text-xs text-slate-400 tracking-wide dark:text-white">
+                  13 December 2023
+                </p>
                 <div>
                   <a href=""
-                    ><h1 class="font-bold leading-relaxed text-slate-800 underline hover:no-underline hover:text-colors-primary transition-colors ease-in duration-200 dark:text-white">Pendaftaran SMK Negeri Serang Telah Dibuka !</h1></a
+                    ><h1
+                      class="font-bold leading-relaxed text-slate-800 underline hover:no-underline hover:text-colors-primary transition-colors ease-in duration-200 dark:text-white"
+                    >
+                      Pendaftaran SMK Negeri Serang Telah Dibuka !
+                    </h1></a
                   >
                 </div>
-                <p class="text-xs text-slate-400 tracking-wide dark:text-white">By Admin SmkNs</p>
+                <p class="text-xs text-slate-400 tracking-wide dark:text-white">
+                  By Admin SmkNs
+                </p>
 
                 <div class="pt-4">
-                  <a href="" class="font-semibold text-colors-primary tracking-wide text-xs hover:text-slate-800 hover:font-bold transition-colors ease-in duration-200 dark:hover:text-white">Baca Selengkapnya</a>
+                  <a
+                    href=""
+                    class="font-semibold text-colors-primary tracking-wide text-xs hover:text-slate-800 hover:font-bold transition-colors ease-in duration-200 dark:hover:text-white"
+                    >Baca Selengkapnya</a
+                  >
                 </div>
               </div>
             </div>
           </div>
 
           <!-- Buton -->
-          <div data-aos="fade-up" data-aos-duration="1000" class="flex items-center justify-center pt-16">
+          <div
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            class="flex items-center justify-center pt-16"
+          >
             <button class="btn shadow-md">Semua Berita</button>
           </div>
         </div>
@@ -645,43 +1264,104 @@
       <!-- End Section Berita -->
 
       <!-- Section Galeri -->
-      <section id="galeri" class="bg-[#362FD9] -mb-8 pt-8 pb-24 lg:pb-8 lg:pt-12">
+      <section
+        id="galeri"
+        class="bg-[#362FD9] -mb-8 pt-8 pb-24 lg:pb-8 lg:pt-12"
+      >
         <div class="container py-14 md:py-20">
-          <div class="flex flex-col lg:flex-row items-center gap-8 relative lg:static">
+          <div
+            class="flex flex-col lg:flex-row items-center gap-8 relative lg:static"
+          >
             <div class="w-full lg:w-1/3">
-              <h1 data-aos="zoom-in" data-aos-duration="1000" class="text-white font-bold md:text-3xl text-xl leading-relaxed text-center lg:text-start w-[90%] md:w-3/4 lg:w-full mx-auto">Foto Dokumentasi Kegiatan SMK Negeri Serang</h1>
+              <h1
+                data-aos="zoom-in"
+                data-aos-duration="1000"
+                class="text-white font-bold md:text-3xl text-xl leading-relaxed text-center lg:text-start w-[90%] md:w-3/4 lg:w-full mx-auto"
+              >
+                Foto Dokumentasi Kegiatan SMK Negeri Serang
+              </h1>
 
               <!-- buton -->
-              <div class="lg:mt-48 mx-auto w-full absolute lg:static -bottom-[10%]">
-                <div class="swiper-pagination-custom flex items-center justify-center mt-5 lg:justify-start"></div>
+              <div
+                class="lg:mt-48 mx-auto w-full absolute lg:static -bottom-[10%]"
+              >
+                <div
+                  class="swiper-pagination-custom flex items-center justify-center mt-5 lg:justify-start"
+                ></div>
               </div>
             </div>
 
             <!-- conten galeri -->
             <div class="w-full lg:w-2/3 mt-8 lg:mt-0">
-              <div class="swiper mySwiper multiple-slide-carousel swiper-container relative">
+              <div
+                class="swiper mySwiper multiple-slide-carousel swiper-container relative"
+              >
                 <div class="swiper-wrapper">
                   <!-- galeri 1 -->
-                  <div data-aos="zoom-in" data-aos-duration="1000" class="swiper-slide">
-                    <div class="relative overflow-hidden h-[450px] rounded-xl lg:rounded-none md:h-full">
-                      <img src="img/galeri-1.png" alt="" class="w-full h-full object-fill hover:scale-110 ease-in duration-500" />
-                      <div class="absolute bottom-0 w-full bg-white/50 py-8 lg:py-4 px-6 backdrop-blur-[4px] h-[45%] text-center">
-                        <div class="flex flex-col items-center justify-between h-[130px] mt-4 lg:h-full lg:mt-0 lg:justify-start">
-                          <h1 class="text-slate-800 font-bold text-2xl lg:text-xl">Meja Karya Salah satu Siswa</h1>
-                          <p class="mt-8 font-semibold text-base lg:text-sm text-slate-800">SMK Negeri Serang</p>
+                  <div
+                    data-aos="zoom-in"
+                    data-aos-duration="1000"
+                    class="swiper-slide"
+                  >
+                    <div
+                      class="relative overflow-hidden h-[450px] rounded-xl lg:rounded-none md:h-full"
+                    >
+                      <img
+                        src="img/galeri-1.png"
+                        alt=""
+                        class="w-full h-full object-fill hover:scale-110 ease-in duration-500"
+                      />
+                      <div
+                        class="absolute bottom-0 w-full bg-white/50 py-8 lg:py-4 px-6 backdrop-blur-[4px] h-[45%] text-center"
+                      >
+                        <div
+                          class="flex flex-col items-center justify-between h-[130px] mt-4 lg:h-full lg:mt-0 lg:justify-start"
+                        >
+                          <h1
+                            class="text-slate-800 font-bold text-2xl lg:text-xl"
+                          >
+                            Meja Karya Salah satu Siswa
+                          </h1>
+                          <p
+                            class="mt-8 font-semibold text-base lg:text-sm text-slate-800"
+                          >
+                            SMK Negeri Serang
+                          </p>
                         </div>
                       </div>
                     </div>
                   </div>
 
                   <!-- galeri 2 -->
-                  <div data-aos="zoom-in" data-aos-duration="1000" class="swiper-slide">
-                    <div class="relative overflow-hidden h-[450px] rounded-xl lg:rounded-none md:h-full lg:w-full">
-                      <img src="img/galeri-2.png" alt="" class="w-full h-full object-fill hover:scale-110 ease-in duration-500" />
-                      <div class="absolute bottom-0 w-full bg-white/50 py-8 lg:py-4 px-6 backdrop-blur-[4px] h-[45%] text-center">
-                        <div class="flex flex-col items-center justify-between h-[130px] mt-4 lg:h-full lg:mt-0 lg:justify-start">
-                          <h1 class="text-slate-800 font-bold text-2xl lg:text-xl mx-auto">Perpustakaan Baru</h1>
-                          <p class="mt-8 font-semibold text-base lg:text-sm text-slate-800">Perpustakaan SMK Negeri Serang</p>
+                  <div
+                    data-aos="zoom-in"
+                    data-aos-duration="1000"
+                    class="swiper-slide"
+                  >
+                    <div
+                      class="relative overflow-hidden h-[450px] rounded-xl lg:rounded-none md:h-full lg:w-full"
+                    >
+                      <img
+                        src="img/galeri-2.png"
+                        alt=""
+                        class="w-full h-full object-fill hover:scale-110 ease-in duration-500"
+                      />
+                      <div
+                        class="absolute bottom-0 w-full bg-white/50 py-8 lg:py-4 px-6 backdrop-blur-[4px] h-[45%] text-center"
+                      >
+                        <div
+                          class="flex flex-col items-center justify-between h-[130px] mt-4 lg:h-full lg:mt-0 lg:justify-start"
+                        >
+                          <h1
+                            class="text-slate-800 font-bold text-2xl lg:text-xl mx-auto"
+                          >
+                            Perpustakaan Baru
+                          </h1>
+                          <p
+                            class="mt-8 font-semibold text-base lg:text-sm text-slate-800"
+                          >
+                            Perpustakaan SMK Negeri Serang
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -689,12 +1369,30 @@
 
                   <!-- galeri 3 -->
                   <div class="swiper-slide">
-                    <div class="relative overflow-hidden h-[450px] rounded-xl lg:rounded-none md:h-full lg:w-full">
-                      <img src="img/galeri-3.png" alt="" class="w-full h-full object-fill hover:scale-110 ease-in duration-500" />
-                      <div class="absolute bottom-0 w-full bg-white/50 py-8 lg:py-4 px-6 backdrop-blur-[4px] h-[45%] text-center">
-                        <div class="flex flex-col items-center justify-between h-[130px] mt-4 lg:h-full lg:mt-0 lg:justify-start">
-                          <h1 class="text-slate-800 font-bold text-2xl lg:text-xl mx-auto">Reuni Akbar Ang 23</h1>
-                          <p class="mt-8 font-semibold text-base lg:text-sm text-slate-800">Aula SMK Negeri Serang</p>
+                    <div
+                      class="relative overflow-hidden h-[450px] rounded-xl lg:rounded-none md:h-full lg:w-full"
+                    >
+                      <img
+                        src="img/galeri-3.png"
+                        alt=""
+                        class="w-full h-full object-fill hover:scale-110 ease-in duration-500"
+                      />
+                      <div
+                        class="absolute bottom-0 w-full bg-white/50 py-8 lg:py-4 px-6 backdrop-blur-[4px] h-[45%] text-center"
+                      >
+                        <div
+                          class="flex flex-col items-center justify-between h-[130px] mt-4 lg:h-full lg:mt-0 lg:justify-start"
+                        >
+                          <h1
+                            class="text-slate-800 font-bold text-2xl lg:text-xl mx-auto"
+                          >
+                            Reuni Akbar Ang 23
+                          </h1>
+                          <p
+                            class="mt-8 font-semibold text-base lg:text-sm text-slate-800"
+                          >
+                            Aula SMK Negeri Serang
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -702,12 +1400,30 @@
 
                   <!-- galeri 1 -->
                   <div class="swiper-slide">
-                    <div class="relative overflow-hidden h-[450px] rounded-xl lg:rounded-none md:h-full lg:w-full">
-                      <img src="img/galeri-1.png" alt="" class="w-full h-full object-fill hover:scale-110 ease-in duration-500" />
-                      <div class="absolute bottom-0 w-full bg-white/50 py-8 lg:py-4 px-6 backdrop-blur-[4px] h-[45%] text-center">
-                        <div class="flex flex-col items-center justify-between h-[130px] mt-4 lg:h-full lg:mt-0 lg:justify-start">
-                          <h1 class="text-slate-800 font-bold text-2xl lg:text-xl">Meja Karya Salah satu Siswa</h1>
-                          <p class="mt-8 font-semibold text-base lg:text-sm text-slate-800">SMK Negeri Serang</p>
+                    <div
+                      class="relative overflow-hidden h-[450px] rounded-xl lg:rounded-none md:h-full lg:w-full"
+                    >
+                      <img
+                        src="img/galeri-1.png"
+                        alt=""
+                        class="w-full h-full object-fill hover:scale-110 ease-in duration-500"
+                      />
+                      <div
+                        class="absolute bottom-0 w-full bg-white/50 py-8 lg:py-4 px-6 backdrop-blur-[4px] h-[45%] text-center"
+                      >
+                        <div
+                          class="flex flex-col items-center justify-between h-[130px] mt-4 lg:h-full lg:mt-0 lg:justify-start"
+                        >
+                          <h1
+                            class="text-slate-800 font-bold text-2xl lg:text-xl"
+                          >
+                            Meja Karya Salah satu Siswa
+                          </h1>
+                          <p
+                            class="mt-8 font-semibold text-base lg:text-sm text-slate-800"
+                          >
+                            SMK Negeri Serang
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -715,12 +1431,30 @@
 
                   <!-- galeri 2 -->
                   <div class="swiper-slide">
-                    <div class="relative overflow-hidden h-[450px] rounded-xl lg:rounded-none md:h-full lg:w-full">
-                      <img src="img/galeri-2.png" alt="" class="w-full h-full object-fill hover:scale-110 ease-in duration-500" />
-                      <div class="absolute bottom-0 w-full bg-white/50 py-8 lg:py-4 px-6 backdrop-blur-[4px] h-[45%] text-center">
-                        <div class="flex flex-col items-center justify-between h-[130px] mt-4 lg:h-full lg:mt-0 lg:justify-start">
-                          <h1 class="text-slate-800 font-bold text-2xl lg:text-xl mx-auto">Perpustakaan Baru</h1>
-                          <p class="mt-8 font-semibold text-base lg:text-sm text-slate-800">Perpustakaan SMK Negeri Serang</p>
+                    <div
+                      class="relative overflow-hidden h-[450px] rounded-xl lg:rounded-none md:h-full lg:w-full"
+                    >
+                      <img
+                        src="img/galeri-2.png"
+                        alt=""
+                        class="w-full h-full object-fill hover:scale-110 ease-in duration-500"
+                      />
+                      <div
+                        class="absolute bottom-0 w-full bg-white/50 py-8 lg:py-4 px-6 backdrop-blur-[4px] h-[45%] text-center"
+                      >
+                        <div
+                          class="flex flex-col items-center justify-between h-[130px] mt-4 lg:h-full lg:mt-0 lg:justify-start"
+                        >
+                          <h1
+                            class="text-slate-800 font-bold text-2xl lg:text-xl mx-auto"
+                          >
+                            Perpustakaan Baru
+                          </h1>
+                          <p
+                            class="mt-8 font-semibold text-base lg:text-sm text-slate-800"
+                          >
+                            Perpustakaan SMK Negeri Serang
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -728,25 +1462,55 @@
 
                   <!-- galeri 3 -->
                   <div class="swiper-slide">
-                    <div class="relative overflow-hidden h-[450px] rounded-xl lg:rounded-none md:h-full lg:w-full">
-                      <img src="img/galeri-3.png" alt="" class="w-full h-full object-fill hover:scale-110 ease-in duration-500" />
-                      <div class="absolute bottom-0 w-full bg-white/50 py-8 lg:py-4 px-6 backdrop-blur-[4px] h-[45%] text-center">
-                        <div class="flex flex-col items-center justify-between h-[130px] mt-4 lg:h-full lg:mt-0 lg:justify-start">
-                          <h1 class="text-slate-800 font-bold text-2xl lg:text-xl mx-auto">Reuni Akbar Ang 23</h1>
-                          <p class="mt-8 font-semibold text-base lg:text-sm text-slate-800">Aula SMK Negeri Serang</p>
+                    <div
+                      class="relative overflow-hidden h-[450px] rounded-xl lg:rounded-none md:h-full lg:w-full"
+                    >
+                      <img
+                        src="img/galeri-3.png"
+                        alt=""
+                        class="w-full h-full object-fill hover:scale-110 ease-in duration-500"
+                      />
+                      <div
+                        class="absolute bottom-0 w-full bg-white/50 py-8 lg:py-4 px-6 backdrop-blur-[4px] h-[45%] text-center"
+                      >
+                        <div
+                          class="flex flex-col items-center justify-between h-[130px] mt-4 lg:h-full lg:mt-0 lg:justify-start"
+                        >
+                          <h1
+                            class="text-slate-800 font-bold text-2xl lg:text-xl mx-auto"
+                          >
+                            Reuni Akbar Ang 23
+                          </h1>
+                          <p
+                            class="mt-8 font-semibold text-base lg:text-sm text-slate-800"
+                          >
+                            Aula SMK Negeri Serang
+                          </p>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
 
-                <button id="slider-button-left" class="swiper-button-left absolute top-1/2 left-2 z-10" data-carousel-prev>
-                  <i class="fa-solid fa-left-long text-xl text-colors-primary p-2 bg-white rounded-full hover:bg-colors-primary hover:text-white ease-in duration-300"></i>
+                <button
+                  id="slider-button-left"
+                  class="swiper-button-left absolute top-1/2 left-2 z-10"
+                  data-carousel-prev
+                >
+                  <i
+                    class="fa-solid fa-left-long text-xl text-colors-primary p-2 bg-white rounded-full hover:bg-colors-primary hover:text-white ease-in duration-300"
+                  ></i>
                 </button>
 
                 <!-- next -->
-                <button id="slider-button-right" class="swiper-button-right absolute top-1/2 right-2 z-10" data-carousel-next>
-                  <i class="fa-solid fa-right-long text-xl text-colors-primary p-2 bg-white rounded-full hover:bg-colors-primary hover:text-white ease-in duration-300"></i>
+                <button
+                  id="slider-button-right"
+                  class="swiper-button-right absolute top-1/2 right-2 z-10"
+                  data-carousel-next
+                >
+                  <i
+                    class="fa-solid fa-right-long text-xl text-colors-primary p-2 bg-white rounded-full hover:bg-colors-primary hover:text-white ease-in duration-300"
+                  ></i>
                 </button>
               </div>
             </div>
@@ -759,8 +1523,16 @@
       <section id="alumni" class="bg-white dark:bg-dark-color">
         <div class="container py-14 lg:py-20 w-[90%] mx-auto">
           <div class="title-2">
-            <h1 data-aos="zoom-in" data-aos-duration="1000" class="dark:text-white">Profil Alumni <span>SMK Negeri</span> Serang</h1>
-            <p data-aos="fade-up" data-aos-duration="1500">Profil Alumni SMK Negeri Serang.</p>
+            <h1
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+              class="dark:text-white"
+            >
+              Profil Alumni <span>SMK Negeri</span> Serang
+            </h1>
+            <p data-aos="fade-up" data-aos-duration="1500">
+              Profil Alumni SMK Negeri Serang.
+            </p>
           </div>
 
           <!-- Content -->
@@ -768,16 +1540,39 @@
             <div class="swiper swiperAlumni swiper-container relative">
               <div class="swiper-wrapper">
                 <!-- slide 1 -->
-                <div data-aos="zoom-in" data-aos-duration="1000" class="swiper-slide">
-                  <div class="flex flex-col lg:flex-row items-center justify-center gap-4">
+                <div
+                  data-aos="zoom-in"
+                  data-aos-duration="1000"
+                  class="swiper-slide"
+                >
+                  <div
+                    class="flex flex-col lg:flex-row items-center justify-center gap-4"
+                  >
                     <div class="overflow-hidden h-[350px]">
-                      <img src="img/alumni-1.png" alt="" class="w-full h-full object-fill" />
+                      <img
+                        src="img/alumni-1.png"
+                        alt=""
+                        class="w-full h-full object-fill"
+                      />
                     </div>
                     <div class="lg:w-1/3 text-center md:text-start">
-                      <h1 class="text-xl text-slate-800 font-bold dark:text-white">Wilyam Arilsom ST</h1>
-                      <p class="text-xs text-slate-900 dark:text-white">Angkatan 2009</p>
-                      <p class="mt-6 text-xs text-slate-900 leading-relaxed dark:text-white">Livianti adalah seorang ui ux yang berkerda di Inggris saat ini dia adalah salah satu alumni yang berprestasi.</p>
-                      <p class="mt-6 text-sm text-colors-primary dark:font-bold dark:hover:text-white">
+                      <h1
+                        class="text-xl text-slate-800 font-bold dark:text-white"
+                      >
+                        Wilyam Arilsom ST
+                      </h1>
+                      <p class="text-xs text-slate-900 dark:text-white">
+                        Angkatan 2009
+                      </p>
+                      <p
+                        class="mt-6 text-xs text-slate-900 leading-relaxed dark:text-white"
+                      >
+                        Livianti adalah seorang ui ux yang berkerda di Inggris
+                        saat ini dia adalah salah satu alumni yang berprestasi.
+                      </p>
+                      <p
+                        class="mt-6 text-sm text-colors-primary dark:font-bold dark:hover:text-white"
+                      >
                         <a href="">Baca Selengkapnya</a>
                       </p>
                     </div>
@@ -785,16 +1580,39 @@
                 </div>
 
                 <!-- Content 2 -->
-                <div data-aos="zoom-in" data-aos-duration="1000" class="swiper-slide">
-                  <div class="flex flex-col lg:flex-row items-center justify-center gap-4">
+                <div
+                  data-aos="zoom-in"
+                  data-aos-duration="1000"
+                  class="swiper-slide"
+                >
+                  <div
+                    class="flex flex-col lg:flex-row items-center justify-center gap-4"
+                  >
                     <div class="overflow-hidden h-[350px]">
-                      <img src="img/alumni-2.png" alt="" class="w-full h-full object-fill" />
+                      <img
+                        src="img/alumni-2.png"
+                        alt=""
+                        class="w-full h-full object-fill"
+                      />
                     </div>
                     <div class="lg:w-1/3 text-center md:text-start">
-                      <h1 class="text-xl text-slate-800 font-bold dark:text-white">Windi Alextria Ayu</h1>
-                      <p class="text-xs text-slate-900 dark:text-white">Angkatan 2009</p>
-                      <p class="mt-6 text-xs text-slate-900 leading-relaxed dark:text-white">Livianti adalah seorang ui ux yang berkerda di Inggris saat ini dia adalah salah satu alumni yang berprestasi.</p>
-                      <p class="mt-6 text-sm text-colors-primary dark:font-bold">
+                      <h1
+                        class="text-xl text-slate-800 font-bold dark:text-white"
+                      >
+                        Windi Alextria Ayu
+                      </h1>
+                      <p class="text-xs text-slate-900 dark:text-white">
+                        Angkatan 2009
+                      </p>
+                      <p
+                        class="mt-6 text-xs text-slate-900 leading-relaxed dark:text-white"
+                      >
+                        Livianti adalah seorang ui ux yang berkerda di Inggris
+                        saat ini dia adalah salah satu alumni yang berprestasi.
+                      </p>
+                      <p
+                        class="mt-6 text-sm text-colors-primary dark:font-bold"
+                      >
                         <a href="">Baca Selengkapnya</a>
                       </p>
                     </div>
@@ -803,15 +1621,34 @@
 
                 <!-- slide 1 -->
                 <div class="swiper-slide">
-                  <div class="flex flex-col lg:flex-row items-center justify-center gap-4">
+                  <div
+                    class="flex flex-col lg:flex-row items-center justify-center gap-4"
+                  >
                     <div class="overflow-hidden h-[350px]">
-                      <img src="img/alumni-1.png" alt="" class="w-full h-full object-fill" />
+                      <img
+                        src="img/alumni-1.png"
+                        alt=""
+                        class="w-full h-full object-fill"
+                      />
                     </div>
                     <div class="lg:w-1/3 text-center md:text-start">
-                      <h1 class="text-xl text-slate-800 font-bold dark:text-white">Wilyam Arilsom ST</h1>
-                      <p class="text-xs text-slate-900 dark:text-white">Angkatan 2009</p>
-                      <p class="mt-6 text-xs text-slate-900 leading-relaxed dark:text-white">Livianti adalah seorang ui ux yang berkerda di Inggris saat ini dia adalah salah satu alumni yang berprestasi.</p>
-                      <p class="mt-6 text-sm text-colors-primary dark:font-bold">
+                      <h1
+                        class="text-xl text-slate-800 font-bold dark:text-white"
+                      >
+                        Wilyam Arilsom ST
+                      </h1>
+                      <p class="text-xs text-slate-900 dark:text-white">
+                        Angkatan 2009
+                      </p>
+                      <p
+                        class="mt-6 text-xs text-slate-900 leading-relaxed dark:text-white"
+                      >
+                        Livianti adalah seorang ui ux yang berkerda di Inggris
+                        saat ini dia adalah salah satu alumni yang berprestasi.
+                      </p>
+                      <p
+                        class="mt-6 text-sm text-colors-primary dark:font-bold"
+                      >
                         <a href="">Baca Selengkapnya</a>
                       </p>
                     </div>
@@ -820,22 +1657,44 @@
 
                 <!-- Content 2 -->
                 <div class="swiper-slide">
-                  <div class="flex flex-col lg:flex-row items-center justify-center gap-4">
+                  <div
+                    class="flex flex-col lg:flex-row items-center justify-center gap-4"
+                  >
                     <div class="overflow-hidden h-[350px]">
-                      <img src="img/alumni-2.png" alt="" class="w-full h-full object-fill" />
+                      <img
+                        src="img/alumni-2.png"
+                        alt=""
+                        class="w-full h-full object-fill"
+                      />
                     </div>
                     <div class="lg:w-1/3 text-center md:text-start">
-                      <h1 class="text-xl text-slate-800 font-bold dark:text-white">Windi Alextria Ayu</h1>
-                      <p class="text-xs text-slate-900 dark:text-white">Angkatan 2009</p>
-                      <p class="mt-6 text-xs text-slate-900 leading-relaxed dark:text-white">Livianti adalah seorang ui ux yang berkerda di Inggris saat ini dia adalah salah satu alumni yang berprestasi.</p>
-                      <p class="mt-6 text-sm text-colors-primary dark:font-bold">
+                      <h1
+                        class="text-xl text-slate-800 font-bold dark:text-white"
+                      >
+                        Windi Alextria Ayu
+                      </h1>
+                      <p class="text-xs text-slate-900 dark:text-white">
+                        Angkatan 2009
+                      </p>
+                      <p
+                        class="mt-6 text-xs text-slate-900 leading-relaxed dark:text-white"
+                      >
+                        Livianti adalah seorang ui ux yang berkerda di Inggris
+                        saat ini dia adalah salah satu alumni yang berprestasi.
+                      </p>
+                      <p
+                        class="mt-6 text-sm text-colors-primary dark:font-bold"
+                      >
                         <a href="">Baca Selengkapnya</a>
                       </p>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="swiper-alumni-custom flex items-center justify-center mt-12 lg:mt-14" :class="{'dark' : isDark}"></div>
+              <div
+                class="swiper-alumni-custom flex items-center justify-center mt-12 lg:mt-14"
+                :class="{'dark' : isDark}"
+              ></div>
             </div>
           </div>
         </div>
@@ -846,28 +1705,46 @@
     <!-- Footer section -->
     <footer class="bg-[#362FD9]">
       <div data-aos="zoom-in" data-aos-duration="1000" class="container py-14">
-        <div class="flex flex-col md:flex-row md:justify-between text-white text-center md:text-start">
+        <div
+          class="flex flex-col md:flex-row md:justify-between text-white text-center md:text-start"
+        >
           <!-- bagian kiri -->
           <div class="md:w-1/3">
             <h1 class="text-2xl md:text-4xl font-bold tracking-wide">SMKNS</h1>
-            <p class="mt-6 md:mt-10 text-sm text-justify leading-relaxed">sekolah adalah tempat mencetak penerus bangsa yang berkualitas dan berprestasi di segala bidang yang dapat bersaing di dunia internasional</p>
+            <p class="mt-6 md:mt-10 text-sm text-justify leading-relaxed">
+              sekolah adalah tempat mencetak penerus bangsa yang berkualitas dan
+              berprestasi di segala bidang yang dapat bersaing di dunia
+              internasional
+            </p>
           </div>
 
           <!-- Bagian Kanan -->
           <div class="md:w-1/3 md:flex md:flex-col items-end mt-12 md:mt-0">
             <div class="text-4xl md:text-2xl space-x-2">
-              <i class="hover:-translate-y-2 ease-in-out duration-200 fa-brands fa-square-facebook"></i>
-              <i class="hover:-translate-y-2 ease-in-out duration-200 fa-brands fa-square-x-twitter"></i>
-              <i class="hover:-translate-y-2 ease-in-out duration-200 fa-brands fa-square-instagram"></i>
-              <i class="hover:-translate-y-2 ease-in-out duration-200 fa-brands fa-square-youtube"></i>
+              <i
+                class="hover:-translate-y-2 ease-in-out duration-200 fa-brands fa-square-facebook"
+              ></i>
+              <i
+                class="hover:-translate-y-2 ease-in-out duration-200 fa-brands fa-square-x-twitter"
+              ></i>
+              <i
+                class="hover:-translate-y-2 ease-in-out duration-200 fa-brands fa-square-instagram"
+              ></i>
+              <i
+                class="hover:-translate-y-2 ease-in-out duration-200 fa-brands fa-square-youtube"
+              ></i>
             </div>
             <div class="mt-6 md:mt-10 md:text-end">
-              <p class="font-semibold leading-relaxed">Dibuat Oleh Aradea, Menggunakan Tailwind css dan Js. @2024</p>
+              <p class="font-semibold leading-relaxed">
+                Dibuat Oleh Aradea, Menggunakan Tailwind css dan Js. @2024
+              </p>
             </div>
           </div>
         </div>
       </div>
-      <div data-aos="zoom-in" data-aos-duration="1000" class="border-t border-white text-center text-white flex items-center justify-center">
+      <div
+        class="border-t border-white text-center text-white flex items-center justify-center"
+      >
         <p class="pt-8 pb-6">2024 &copy; SMKN. All Right Reserved.</p>
       </div>
     </footer>
@@ -958,6 +1835,32 @@
           },
         },
       });
+    </script>
+
+    <!-- Scroll active link -->
+
+    <script>
+      // Active Link
+
+      const navlinkss = document.querySelectorAll("nav ul li a");
+      const sectionn = document.querySelectorAll("section");
+
+      window.onscroll = () => {
+        let current = "beranda";
+
+        sectionn.forEach((section) => {
+          const sectionTop = section.offsetTop;
+          if (pageYOffset >= sectionTop - 150) {
+            current = section.getAttribute("id");
+          }
+        });
+        navlinkss.forEach((item) => {
+          item.classList.remove("text-colors-primary");
+          if (item.href.includes(current)) {
+            item.classList.add("text-colors-primary");
+          }
+        });
+      };
     </script>
   </body>
 </html>
